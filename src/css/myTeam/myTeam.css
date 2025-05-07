@@ -1,0 +1,100 @@
+.myTeamWrap {
+  padding: 60px 0;
+}
+.myTeamWrap > h2 {
+  padding-bottom: 3rem;
+  padding: 1rem 0 0 1rem;
+}
+.myTeamWrap .myTeamDisplay {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.myTeamWrap .myTeamDisplay .myTeamInfoA {
+  padding-top: 3rem;
+  color: #fff;
+}
+.myTeamWrap .myTeamDisplay .myTeamInfoA img {
+  width: 70%;
+  margin: auto;
+}
+.myTeamWrap .myTeamDisplay .myTeamInfoA h3 {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+.myTeamWrap .myTeamDisplay .myTeamInfoB {
+  width: 100%;
+}
+.myTeamWrap .myTeamDisplay .myTeamInfoB > div {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.myTeamWrap .myTeamDisplay .myTeamInfoB > div p {
+  font-size: 4vw;
+}
+.myTeamWrap .myTeamDisplay .myTeamInfoB > div p > span {
+  color: #ccc;
+}
+.myTeamWrap .playerListWrap {
+  margin: 5rem 0;
+}
+.myTeamWrap .playerListWrap h2 {
+  margin-bottom: 1rem;
+}
+.myTeamWrap .playerListWrap .playerBox {
+  display: flex;
+  gap: 12px;
+  padding-bottom: 1rem;
+}
+.myTeamWrap .playerListWrap .playerBox figure {
+  max-width: 30%;
+  height: 100%;
+  overflow: hidden;
+}
+.myTeamWrap .playerListWrap .playerBox > div {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.myTeamWrap .playerListWrap > button {
+  display: block;
+  margin-left: auto;
+}
+.myTeamWrap .matchScheduleWrap {
+  padding: 0 1rem;
+}
+.myTeamWrap .matchScheduleWrap .matchScheduleBox {
+  width: 100%;
+}
+.myTeamWrap .matchScheduleWrap .matchScheduleBox .matchScheduleBoxPc {
+  display: none;
+}
+.myTeamWrap .matchScheduleWrap .matchScheduleBox .matchScheduleBoxMobile {
+  width: 100%;
+  display: flex;
+  margin-top: 3rem;
+}
+.myTeamWrap .matchScheduleWrap .matchScheduleBox .matchScheduleBoxMobile .matchScheduleLeft {
+  width: 25%;
+  height: 60vh;
+  padding: 1rem;
+  background-color: #21265F;
+  color: #fff;
+}
+.myTeamWrap .matchScheduleWrap .matchScheduleBox .matchScheduleBoxMobile .matchScheduleLeft h3 {
+  font-size: 1.5rem;
+  text-align: right;
+}
+.myTeamWrap .matchScheduleWrap .matchScheduleBox .matchScheduleBoxMobile .matchScheduleRight {
+  width: 100%;
+  height: 60vh;
+  background-color: #eee;
+}
+
+/*# sourceMappingURL=myTeam.css.map */

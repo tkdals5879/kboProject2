@@ -1,0 +1,64 @@
+.mainWrap {
+  padding: 5rem 0;
+}
+.mainWrap section {
+  padding: 0 1rem 1rem 1rem;
+}
+.mainWrap section h2 {
+  margin-bottom: 2rem;
+  font-size: 32px;
+}
+.mainWrap section .clubWrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.mainWrap section .clubWrap > div {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  align-content: center;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  border-radius: 10px;
+  position: relative;
+  z-index: 99;
+}
+.mainWrap section .clubWrap > div .favorite {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  color: #969696;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.mainWrap section .clubWrap > div .favorite .fav {
+  color: gold;
+}
+
+@media (min-width: 767px) {
+  .mainWrap {
+    padding: 5rem clamp(10rem, 5vw, 15rem);
+  }
+  .mainWrap section .clubWrap {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .mainWrap section .clubWrap > div {
+    transition: 0.1s;
+  }
+  .mainWrap section .clubWrap > div:hover {
+    background-color: #ccc;
+  }
+  .mainWrap section .clubWrap > div .favorite {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .mainWrap section .clubWrap {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

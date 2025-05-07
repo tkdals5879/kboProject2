@@ -1,0 +1,113 @@
+.layoutWrap {
+  width: 100%;
+}
+.layoutWrap .fixedHeader {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  padding: 0 1rem;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  color: #000;
+  z-index: 99;
+}
+.layoutWrap .fixedHeader h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.layoutWrap .fixedHeader .topNavWrap {
+  display: none;
+}
+.layoutWrap .fixedHeader .topNavWrap li {
+  color: #000;
+}
+.layoutWrap .fixedHeader .goToHome {
+  margin-left: auto;
+  font-size: 24px;
+  background-color: transparent;
+  border: none;
+  color: #000;
+}
+.layoutWrap .fixedHeader .goToBack {
+  font-size: 24px;
+  padding: 1rem;
+  color: #000;
+  background-color: transparent;
+  border: none;
+}
+.layoutWrap .fixedNav {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #21265F;
+  z-index: 99;
+}
+.layoutWrap .fixedNav .navWrap {
+  width: 100%;
+  height: 100%;
+}
+.layoutWrap .fixedNav .navWrap ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.layoutWrap .fixedNav .navWrap ul li {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  align-content: end;
+  text-align: center;
+}
+.layoutWrap .fixedNav .navWrap ul li:not(:last-child) {
+  border-right: 1px solid #ccc;
+}
+.layoutWrap .fixedNav .navWrap ul li > a {
+  display: block;
+  align-content: end;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 1024px) {
+  .layoutWrap .fixedHeader .topNavWrap {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 0.7vw;
+    color: #fff;
+  }
+  .layoutWrap .fixedHeader .topNavWrap li {
+    display: flex;
+    gap: 12px;
+  }
+  .layoutWrap .fixedHeader .topNavWrap li:not(:first-child):before {
+    display: block;
+    content: "";
+    width: 1px;
+    height: 12px;
+    margin-top: 4px;
+    background-color: #000;
+  }
+  .layoutWrap .fixedHeader .topNavWrap li:hover {
+    color: orange;
+  }
+  .layoutWrap .goToHome {
+    display: none;
+  }
+  .layoutWrap .fixedNav {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=layout.css.map */

@@ -1,0 +1,23 @@
+.modalBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3764705882);
+  backdrop-filter: blur(3px);
+  z-index: 999;
+}
+.modalBg .modalWrap {
+  width: 80%;
+  height: 70vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.5rem;
+  background-color: #333;
+  color: #fff;
+}
+
+/*# sourceMappingURL=modal.css.map */

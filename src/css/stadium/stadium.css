@@ -1,0 +1,144 @@
+.stadiumWrap {
+  width: 100%;
+  padding: 5rem 1rem;
+}
+.stadiumWrap .contentsWrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #fff;
+  margin-top: 2rem;
+}
+.stadiumWrap .contentsWrap .stadium {
+  width: 100%;
+  height: 150px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.stadiumWrap .contentsWrap .stadium .infoBox {
+  width: 60%;
+  height: 100%;
+  margin-left: auto;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.2);
+  mask-image: linear-gradient(to right, transparent 0%, black 30%);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+}
+.stadiumWrap .contentsWrap .stadium .infoBox .stadiumInfo {
+  text-align: right;
+}
+.stadiumWrap .contentsWrap .stadium .infoBox .stadiumInfo h3 {
+  font-size: 20px;
+}
+.stadiumWrap .contentsWrap .stadium .infoBox .stadiumInfo h4 {
+  font-weight: 500;
+}
+.stadiumWrap .contentsWrap .stadium .infoBox p {
+  font-weight: 600;
+}
+.stadiumWrap .contentsWrap .lg,
+.stadiumWrap .contentsWrap .doosan {
+  background-image: url(../../../public/lg-doosan-stadium.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.stadiumWrap .contentsWrap .samsung {
+  background-image: url(../../../public/samsung-stadium.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.stadiumWrap .contentsWrap .kia {
+  background-image: url(../../../public/kia-stadium.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.stadiumWrap .contentsWrap .kt {
+  background-image: url(../../../public/kt-stadium.webp);
+  background-position: center;
+  background-size: cover;
+}
+.stadiumWrap .contentsWrap .ssg {
+  background-image: url(../../../public/ssg-stadium.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.stadiumWrap .contentsWrap .lotte {
+  background-image: url(../../../public/lotte-stadium.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+.stadiumWrap .contentsWrap .kiwoom {
+  background-image: url(../../../public/kiwoom-stadium.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.stadiumWrap .contentsWrap .hanhwa {
+  background-image: url(../../../public/hanhwa-stadium.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.stadiumWrap .contentsWrap .nc {
+  background-image: url(../../../public/nc-stadium.avif);
+  background-position: center;
+  background-size: cover;
+}
+.stadiumWrap .contentsWrap .favorite {
+  box-shadow: 0px 0px 20px goldenrod !important;
+  border: 2px solid gold;
+  color: rgb(246, 205, 103);
+}
+
+@media (min-width: 767px) {
+  .stadiumWrap {
+    padding: 5rem;
+  }
+  .stadiumWrap h2 {
+    font-size: calc(1vw + 1rem);
+  }
+  .stadiumWrap .contentsWrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+  .stadiumWrap .contentsWrap .stadium {
+    height: 450px;
+    box-shadow: 0px 0px 15px #333;
+  }
+  .stadiumWrap .contentsWrap .stadium .infoBox {
+    width: 100%;
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.3);
+    align-items: start;
+    mask-image: none;
+  }
+  .stadiumWrap .contentsWrap .stadium .infoBox .stadiumInfo {
+    padding-left: 3rem;
+    padding-top: 2rem;
+    justify-items: start;
+  }
+  .stadiumWrap .contentsWrap .stadium .infoBox .stadiumInfo h3 {
+    font-size: 32px;
+  }
+  .stadiumWrap .contentsWrap .stadium .infoBox .stadiumInfo h4 {
+    font-size: 20px;
+    color: #ccc;
+  }
+  .stadiumWrap .contentsWrap .stadium .infoBox > p {
+    font-size: 24px;
+    padding-left: 3rem;
+    padding-bottom: 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .stadiumWrap {
+    padding: 5rem 15rem;
+  }
+}
+
+/*# sourceMappingURL=stadium.css.map */

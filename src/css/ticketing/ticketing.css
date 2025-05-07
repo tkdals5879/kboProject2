@@ -1,0 +1,79 @@
+.ticketingWrap {
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.ticketingWrap h2 {
+  margin-left: 1rem;
+}
+.ticketingWrap .linkWrap {
+  width: 100%;
+  height: 150px;
+  padding: 0;
+  position: relative;
+}
+.ticketingWrap .linkWrap h3 {
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+}
+.ticketingWrap .linkWrap > div {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  box-shadow: 0px 0px 10px #ccc;
+}
+.ticketingWrap .linkWrap > div a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+}
+.ticketingWrap .linkWrap > div a p {
+  display: block;
+  padding: 0.5rem 0;
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  color: #000;
+  font-weight: 600;
+  backdrop-filter: blur(2px);
+}
+.ticketingWrap .linkWrap .ticketlink {
+  background-image: url(../../../public/ticketlinkSite.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.ticketingWrap .linkWrap .interpark {
+  background-image: url(../../../public/interparkTicketSite.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.ticketingWrap .linkWrap .lotte {
+  background-image: url(../../../public/lotteTicketSite.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.ticketingWrap .linkWrap .nc {
+  background-image: url(../../../public/ncTicketSite.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 1024px) {
+  .ticketingWrap {
+    padding: 5rem 15rem;
+  }
+  .ticketingWrap .linkWrap {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+
+/*# sourceMappingURL=ticketing.css.map */

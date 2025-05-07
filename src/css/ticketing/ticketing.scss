@@ -1,0 +1,84 @@
+.ticketingWrap{
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    h2{
+        margin-left: 1rem;
+    }
+    .linkWrap{
+        width: 100%;
+        height: 150px;
+        padding: 0;
+        position: relative;
+
+        h3{
+            position: absolute;
+            top: .5rem;
+            left: 1rem;
+        }
+
+        >div{
+            width: 100%;
+            height: 100%;
+            margin-left: auto;
+            box-shadow: 0px 0px 10px #ccc;
+            a{
+                display: block;
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+                position: relative;
+                p{
+                    display: block;
+                    padding: .5rem 0;
+                    position: absolute;
+                    right: 1rem;
+                    bottom: 1rem;
+                    color: #000;
+                    font-weight: 600;
+                    backdrop-filter: blur(2px);
+                }
+            }
+        }
+
+        .ticketlink{
+            background-image: url(../../../public/ticketlinkSite.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .interpark{
+            background-image: url(../../../public/interparkTicketSite.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .lotte{
+            background-image: url(../../../public/lotteTicketSite.gif) ;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .nc{
+            background-image: url(../../../public/ncTicketSite.png);
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+    
+}
+
+@media (min-width:1024px) {
+   .ticketingWrap{
+    padding: 5rem 15rem;
+    .linkWrap{
+        max-width: 1200px;
+        margin: auto;
+    }
+   } 
+}

@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bc656824.css",
+    "main.js": "/static/js/main.36a82582.js",
+    "static/js/453.e32f18cc.chunk.js": "/static/js/453.e32f18cc.chunk.js",
+    "static/media/samsung-stadium.jpg": "/static/media/samsung-stadium.70d885133f5261021b9e.jpg",
+    "static/media/ssg-stadium.jpg": "/static/media/ssg-stadium.436958ced59b5f11fa46.jpg",
+    "static/media/lotte-stadium.jpeg": "/static/media/lotte-stadium.d394efe049002392a258.jpeg",
+    "static/media/kt-stadium.webp": "/static/media/kt-stadium.0e28f65cb17f38c50442.webp",
+    "static/media/kia-stadium.jpg": "/static/media/kia-stadium.0814731eb7b9f8ed8931.jpg",
+    "static/media/lg-doosan-stadium.jpg": "/static/media/lg-doosan-stadium.d41afdd879fd6b78ed16.jpg",
+    "static/media/KBO Dia Gothic_bold.ttf": "/static/media/KBO Dia Gothic_bold.013c304ec52950f022e5.ttf",
+    "static/media/kiwoom-stadium.jpg": "/static/media/kiwoom-stadium.bdc8524bad8b46d3e019.jpg",
+    "static/media/ncTicketSite.png": "/static/media/ncTicketSite.24d78cb69de1bf98b0b7.png",
+    "static/media/nc-stadium.avif": "/static/media/nc-stadium.0d0e4207d58b191a7a04.avif",
+    "static/media/hanhwa-stadium.jpg": "/static/media/hanhwa-stadium.48b6c54efc6b2626be4e.jpg",
+    "static/media/ticketlinkSite.png": "/static/media/ticketlinkSite.2674d9648f17b272ed52.png",
+    "static/media/interparkTicketSite.png": "/static/media/interparkTicketSite.fe72fdd925f6170a7a88.png",
+    "static/media/lotteTicketSite.gif": "/static/media/lotteTicketSite.cdb97e2fcce92411c20d.gif",
+    "index.html": "/index.html",
+    "main.bc656824.css.map": "/static/css/main.bc656824.css.map",
+    "main.36a82582.js.map": "/static/js/main.36a82582.js.map",
+    "453.e32f18cc.chunk.js.map": "/static/js/453.e32f18cc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bc656824.css",
+    "static/js/main.36a82582.js"
+  ]
+}

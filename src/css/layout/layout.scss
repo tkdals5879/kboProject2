@@ -1,0 +1,130 @@
+.layoutWrap {
+    width: 100%;
+
+    .fixedHeader {
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        padding: 0 1rem;
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        color: #000;
+        z-index: 99;
+
+        h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+
+        .topNavWrap {
+            display: none;
+            li{
+                color: #000;
+            }
+        }
+
+        .goToHome {
+            margin-left: auto;
+            font-size: 24px;
+            background-color: transparent;
+            border: none;
+            color: #000;
+        }
+
+        .goToBack {
+            font-size: 24px;
+            padding: 1rem;
+            color: #000;
+            background-color: transparent;
+            border: none;
+        }
+    }
+
+    .fixedNav {
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: #21265F;
+        z-index: 99;
+
+        .navWrap {
+            width: 100%;
+            height: 100%;
+
+            ul {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                li {
+                    width: 100%;
+                    height: 100%;
+                    color: #fff;
+                    align-content: end;
+                    text-align: center;
+
+                    &:not(:last-child) {
+                        border-right: 1px solid #ccc;
+                    }
+
+                    >a{
+                        display: block;
+                        align-content: end;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:1024px) {
+    .layoutWrap {
+        .fixedHeader {
+            .topNavWrap {
+                position: absolute;
+                top: 50%;
+                right: 1rem;
+                transform: translateY(-50%);
+                display: flex;
+                gap: .7vw;
+                color: #fff;
+
+                li {
+                    display: flex;
+                    gap: 12px;
+
+                    &:not(:first-child):before {
+                        display: block;
+                        content: '';
+                        width: 1px;
+                        height: 12px;
+                        margin-top: 4px;
+                        background-color: #000;
+                    }
+                    &:hover {
+                        color: orange;
+                    }
+                }
+            }
+        }
+
+        .goToHome {
+            display: none;
+        }
+
+        .fixedNav {
+            display: none;
+        }
+    }
+}

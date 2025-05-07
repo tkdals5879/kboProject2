@@ -1,0 +1,152 @@
+@mixin backgroundSet {
+    background-position: center;
+    background-size: cover;
+}
+
+.stadiumWrap {
+    width: 100%;
+    padding: 5rem 1rem;
+
+    .contentsWrap {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        color: #fff;
+        margin-top: 2rem;
+
+        .stadium {
+            width: 100%;
+            height: 150px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+
+            .infoBox {
+                width: 60%;
+                height: 100%;
+                margin-left: auto;
+                backdrop-filter: blur(5px);
+                background-color: rgba(0,0,0,0.2);
+                mask-image: linear-gradient(to right, transparent 0%, black 30%);
+                padding: .5rem; 
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: end;
+                .stadiumInfo{
+                    text-align: right;
+                    h3{
+                        font-size: 20px;
+                    }
+                    h4{
+                        font-weight: 500;
+                    }
+                }
+                p{
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .lg,
+        .doosan {
+            background-image: url(../../../public/lg-doosan-stadium.jpg);
+            @include backgroundSet();
+        }
+
+        .samsung {
+            background-image: url(../../../public/samsung-stadium.jpg);
+            @include backgroundSet();
+        }
+
+        .kia {
+            background-image: url(../../../public/kia-stadium.jpg);
+            @include backgroundSet();
+        }
+
+        .kt {
+            background-image: url(../../../public/kt-stadium.webp);
+            @include backgroundSet();
+        }
+
+        .ssg {
+            background-image: url(../../../public/ssg-stadium.jpg);
+            @include backgroundSet();
+        }
+
+        .lotte {
+            background-image: url(../../../public/lotte-stadium.jpeg);
+            @include backgroundSet();
+        }
+
+        .kiwoom {
+            background-image: url(../../../public/kiwoom-stadium.jpg);
+            @include backgroundSet();
+        }
+
+        .hanhwa {
+            background-image: url(../../../public/hanhwa-stadium.jpg);
+            @include backgroundSet();
+        }
+
+        .nc {
+            background-image: url(../../../public/nc-stadium.avif);
+            @include backgroundSet();
+        }
+        .favorite{
+            box-shadow: 0px 0px 20px goldenrod !important;
+            border: 2px solid gold;
+            color: rgb(246, 205, 103);
+        }
+    }
+}
+
+
+@media (min-width:767px) {
+    .stadiumWrap{
+        padding: 5rem;
+        h2{
+            font-size: calc(1vw + 1rem);
+        }
+        .contentsWrap{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 3rem;
+           .stadium{
+            height: 450px;
+            box-shadow: 0px 0px 15px #333;
+            .infoBox{
+                width: 100%;
+                backdrop-filter: blur(2px);
+                background-color: rgba(0,0,0,0.3);
+                align-items: start;
+                mask-image:none;
+                .stadiumInfo{
+                    padding-left: 3rem;
+                    padding-top: 2rem;
+                    justify-items: start;
+                    h3{
+                        font-size: 32px;
+                    }
+                    h4{
+                        font-size: 20px;
+                        color: #ccc;
+                    }
+                }
+                >p{
+                    font-size: 24px;
+                    padding-left: 3rem;
+                    padding-bottom: 1rem;
+                }
+            }
+           } 
+        }
+    }
+}
+
+@media (min-width:1200px) {
+    .stadiumWrap{
+        padding: 5rem 15rem;
+    }
+}
