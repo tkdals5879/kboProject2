@@ -1,19 +1,23 @@
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 import Modal from '../component/Modal';
+import { toggleFavorite } from '../redux/slice/teamsSlice';
 
 import '../css/stadiumDetail/stadiumDetail.css'
 
 function StadiumDetail() {
 
+    const dispatch = useDispatch()
     const { teamId } = useParams();
     const teams = useSelector((state) => state.teams.teams)
     const clickedTeam = teams.find(team => team.id === teamId)
 
     const info = useSelector((state) => state.teamRank.teamRank)
     const clickedTeamInfo = info.find(infoTeam => infoTeam.teamName.toLowerCase() === teamId.toLowerCase());
-    useEffect(() => {console.log("clickedTeamInfo >> ", clickedTeamInfo)},[clickedTeamInfo])
+    useEffect(() => { console.log("clickedTeamInfo >> ", clickedTeamInfo) }, [clickedTeamInfo])
 
 
     const [modalOpen, setModalOpen] = useState(false)
@@ -24,6 +28,10 @@ function StadiumDetail() {
 
     const handleModalClose = () => {
         setModalOpen(false)
+    }
+
+    const favToogle = (teamId) => {
+        dispatch(toggleFavorite(teamId))
     }
 
     useEffect(() => {
@@ -54,7 +62,10 @@ function StadiumDetail() {
                         <img src={clickedTeam.stadiumImg} alt={clickedTeam.stadiumName} />
                     </div>
                     <div className='homeTeamInfo'>
-                        <h2>홈 구단 정보</h2>
+                        <div className='homeTeamInfoTop'>
+                            <h2>홈 구단 정보</h2>
+                            <button className='favorite' onClick={() => favToogle(clickedTeam.id)}><FontAwesomeIcon icon={faStar} className={clickedTeam.isFavorite ? 'fav' : ''} /></button>
+                        </div>
                         <div>
                             <div className='homeTeamInfoLeft'>
                                 <img src={clickedTeam.logo} alt={clickedTeam.homeTeam} />

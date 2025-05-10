@@ -1,0 +1,11 @@
+.resultWrap {
+  padding: 5rem 1rem;
+}
+
+@media (min-width: 1200px) {
+  .resultWrap {
+    padding: 5rem 15rem;
+  }
+}
+
+/*# sourceMappingURL=result.css.map */

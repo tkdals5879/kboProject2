@@ -28,11 +28,28 @@
 .stadiumDetailWrap .information .homeTeamInfo {
   margin: 2rem auto;
 }
-.stadiumDetailWrap .information .homeTeamInfo h2 {
-  padding-left: 1rem;
+.stadiumDetailWrap .information .homeTeamInfo .homeTeamInfoTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 1rem;
 }
-.stadiumDetailWrap .information .homeTeamInfo > div {
+.stadiumDetailWrap .information .homeTeamInfo .homeTeamInfoTop h2 {
+  padding-left: 1rem;
+}
+.stadiumDetailWrap .information .homeTeamInfo .homeTeamInfoTop button {
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: none;
+  color: #969696;
+}
+.stadiumDetailWrap .information .homeTeamInfo .homeTeamInfoTop .favorite {
+  cursor: pointer;
+}
+.stadiumDetailWrap .information .homeTeamInfo .homeTeamInfoTop .favorite .fav {
+  color: gold;
+}
+.stadiumDetailWrap .information .homeTeamInfo > div:not(:first-child) {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   padding: 1.5rem 1rem;
@@ -40,17 +57,17 @@
   grid-template-columns: repeat(2, 1fr);
   column-gap: 24px;
 }
-.stadiumDetailWrap .information .homeTeamInfo > div .homeTeamInfoRight {
+.stadiumDetailWrap .information .homeTeamInfo > div:not(:first-child) .homeTeamInfoRight {
   display: flex;
   flex-direction: column;
   gap: 12px;
   align-self: center;
 }
-.stadiumDetailWrap .information .homeTeamInfo > div .homeTeamInfoRight p {
+.stadiumDetailWrap .information .homeTeamInfo > div:not(:first-child) .homeTeamInfoRight p {
   color: #6E6E73;
   font-weight: 500;
 }
-.stadiumDetailWrap .information .homeTeamInfo > div .homeTeamInfoRight span {
+.stadiumDetailWrap .information .homeTeamInfo > div:not(:first-child) .homeTeamInfoRight span {
   margin-left: auto;
   border-bottom: 1px solid #000;
 }
@@ -100,28 +117,39 @@
     margin: 0;
     border: 2px solid #eee;
     border-radius: 10px;
-    padding: 1rem 5rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
   }
-  .stadiumDetailWrap .information .homeTeamInfo h2 {
-    margin-bottom: 3rem;
+  .stadiumDetailWrap .information .homeTeamInfo .homeTeamInfoTop {
+    margin-bottom: 2rem;
+  }
+  .stadiumDetailWrap .information .homeTeamInfo .homeTeamInfoTop h2 {
     font-size: calc(1vw + 0.7rem);
   }
-  .stadiumDetailWrap .information .homeTeamInfo > div {
+  .stadiumDetailWrap .information .homeTeamInfo .homeTeamInfoTop .favorite {
+    cursor: pointer;
+  }
+  .stadiumDetailWrap .information .homeTeamInfo .homeTeamInfoTop .favorite .fav {
+    color: gold;
+  }
+  .stadiumDetailWrap .information .homeTeamInfo > div:not(:first-child) {
     border: none;
     padding: 0;
   }
   .stadiumDetailWrap .information .homeTeamInfo .homeTeamInfoLeft {
-    width: fit-content;
-    height: fit-content;
+    width: 20vw;
+    object-fit: contain;
+    margin: auto;
   }
   .stadiumDetailWrap .information .homeTeamInfo .homeTeamInfoLeft img {
-    width: 80%;
+    width: 100%;
   }
   .stadiumDetailWrap .information .homeTeamInfo .homeTeamInfoRight {
     gap: 24px;
   }
   .stadiumDetailWrap .information .homeTeamInfo .homeTeamInfoRight h3 {
     font-size: calc(1vw + 0.5rem);
+    margin-bottom: 1rem;
   }
   .stadiumDetailWrap .information .homeTeamInfo .homeTeamInfoRight p {
     font-size: 1.2rem;

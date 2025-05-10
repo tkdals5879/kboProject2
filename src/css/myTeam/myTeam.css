@@ -1,9 +1,8 @@
 .myTeamWrap {
-  padding: 60px 0;
+  padding: 5rem 1rem;
 }
 .myTeamWrap > h2 {
   padding-bottom: 3rem;
-  padding: 1rem 0 0 1rem;
 }
 .myTeamWrap .myTeamDisplay {
   display: flex;
@@ -11,16 +10,16 @@
   gap: 3rem;
 }
 .myTeamWrap .myTeamDisplay .myTeamInfoA {
-  padding-top: 3rem;
-  color: #fff;
+  padding: 1rem 0;
+  color: #000;
 }
 .myTeamWrap .myTeamDisplay .myTeamInfoA img {
   width: 70%;
   margin: auto;
 }
-.myTeamWrap .myTeamDisplay .myTeamInfoA h3 {
-  font-size: 1.2rem;
-  margin-top: 1rem;
+.myTeamWrap .myTeamDisplay .myTeamInfoA h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
   text-align: center;
 }
 .myTeamWrap .myTeamDisplay .myTeamInfoB {
@@ -39,6 +38,9 @@
 }
 .myTeamWrap .myTeamDisplay .myTeamInfoB > div p > span {
   color: #ccc;
+}
+.myTeamWrap .myTeamDisplay .myTeamInfoB .rankTable {
+  display: none;
 }
 .myTeamWrap .playerListWrap {
   margin: 5rem 0;
@@ -95,6 +97,34 @@
   width: 100%;
   height: 60vh;
   background-color: #eee;
+}
+
+@media (min-width: 767px) {
+  .myTeamWrap .myTeamDisplay .myTeamInfoA {
+    border: 2px solid #ccc;
+    border-radius: 20px;
+  }
+  .myTeamWrap .myTeamDisplay .myTeamInfoB {
+    display: flex;
+  }
+  .myTeamWrap .myTeamDisplay .myTeamInfoB > div {
+    justify-content: center;
+    gap: 1rem;
+  }
+  .myTeamWrap .myTeamDisplay .myTeamInfoB > div p {
+    font-size: calc(0.5rem + 1vw);
+  }
+  .myTeamWrap .myTeamDisplay .myTeamInfoB > div p span {
+    font-size: 0.8rem;
+  }
+  .myTeamWrap .myTeamDisplay .myTeamInfoB .rankTable {
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  .myTeamWrap {
+    padding: 5rem 15rem;
+  }
 }
 
 /*# sourceMappingURL=myTeam.css.map */

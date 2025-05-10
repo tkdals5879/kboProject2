@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination } from 'swiper/modules';
+import TeamRankTable from '../component/TeamRankTable';
 
 import '../css/myTeam/myTeam.css'
 import 'swiper/css'
@@ -33,7 +34,7 @@ function Myteam() {
             <figure>
               <img src={favTeam.logo} alt={`${favTeam.logo}Logo`} />
             </figure>
-            <h3>{favTeam.homeTeam}</h3>
+            <h2>{favTeam.homeTeam}</h2>
           </div>
           <div className='myTeamInfoB'>
 
@@ -47,12 +48,16 @@ function Myteam() {
               <p>원정 경기전적 : {favTeamRank.awayMatchResult} <span>(승,무,패)</span></p>
             </div>
 
+            <div className='rankTable'>
+              <TeamRankTable favTeamName={favTeam.name}/>
+            </div>
+
           </div>
 
         </div>
       ) : (<p>즐겨찾기한 구단이 없습니다!</p>)}
 
-      <div className='playerListWrap'>
+      {/* <div className='playerListWrap'>
         <h2>선수 명단</h2>
         <Swiper
           modules={[Navigation, Pagination]}
@@ -171,7 +176,6 @@ function Myteam() {
               <h3>04월</h3>
             </div>
             <div className='matchScheduleRight'>
-              {/* 달력디자인해서 해당 요일 누르면 모달창 뜨도록 디자인하기. */}
             </div>
           </div>
           <div className='matchScheduleBoxPc'>
@@ -179,7 +183,7 @@ function Myteam() {
             <div className='matchScheduleRight'></div>
           </div>
         </div>
-      </div>
+      </div> */}
 
     </div>
   )
