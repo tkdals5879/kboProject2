@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination } from 'swiper/modules';
+// import { Swiper, SwiperSlide } from 'swiper/react'
+// import { Navigation, Pagination } from 'swiper/modules';
 import TeamRankTable from '../component/TeamRankTable';
 
 import '../css/myTeam/myTeam.css'
