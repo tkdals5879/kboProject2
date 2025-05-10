@@ -28,7 +28,9 @@
     "redux": "^5.0.1",
     "sass": "^1.86.3",
     "swiper": "^11.2.6",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "moment": "version_number"
+    
   },
   "scripts": {
     "start": "react-scripts start",
