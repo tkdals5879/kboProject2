@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 // import { Swiper, SwiperSlide } from 'swiper/react'
 // import { Navigation, Pagination } from 'swiper/modules';
 import TeamRankTable from '../component/TeamRankTable';
+import axios from 'axios'
 
 import '../css/myTeam/myTeam.css'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import 'swiper/css/scrollbar'
+
 
 
 function Myteam() {
@@ -18,10 +20,31 @@ function Myteam() {
 
   const favoriteTeam = teams.filter(team => team.isFavorite)
   const favTeam = favoriteTeam[0]
-  console.log(favTeam)
+  // console.log(favTeam)
 
   const favTeamRank = teamRank.find(rank => rank.teamName === favTeam?.name)
-  console.log(favTeamRank)
+  // console.log(favTeamRank)
+
+  const [players,setPlayers]=useState([]);
+  const [error,setError]=useState('');
+
+  const team = favTeam?.name;
+  console.log(team)
+  const date = new Date().toISOString().slice(0,10);
+  console.log(date)
+
+  useEffect(() => {
+    axios.get(`http://localhost:8000/api/players?team=${team}&date=${date}`)
+    .then((res) => {
+      setPlayers(res.data);
+    })
+    .catch((err) => {
+      console.error(err);
+      setError('데이터를 불러오지 못했습니다.');
+    });
+  },[])
+
+
 
   return (
     <div className='myTeamWrap'>

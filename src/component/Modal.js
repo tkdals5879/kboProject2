@@ -18,6 +18,7 @@ function Modal({clickedTeam,handleModalClose}) {
         <div className='modalBg' onClick={handleBgClick}>
             <div className='modalWrap'>
                 <h3>{teamName}</h3>
+                {/* 최근 10경기 모음 */}
             </div>
         </div>
     )
