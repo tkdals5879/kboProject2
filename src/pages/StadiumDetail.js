@@ -78,7 +78,6 @@ function StadiumDetail() {
                                 <p>최근 10G: {clickedTeamInfo.recent10Game}</p>
                                 <p>연속 : {clickedTeamInfo.winStraight}</p>
                                 <span onClick={handleModalOpen}>더보기</span>
-                                {/* 경기실적 넣기 */}
                             </div>
                         </div>
                     </div>
@@ -96,7 +95,7 @@ function StadiumDetail() {
             </div>
 
             {modalOpen && (
-                <Modal clickedTeam={clickedTeam} handleModalClose={handleModalClose} />
+                <Modal clickedTeam={clickedTeam} handleModalClose={handleModalClose}  teamId={teamId}/>
             )}
 
         </div>

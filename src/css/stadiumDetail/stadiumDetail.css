@@ -45,6 +45,7 @@
 }
 .stadiumDetailWrap .information .homeTeamInfo .homeTeamInfoTop .favorite {
   cursor: pointer;
+  margin-right: 1rem;
 }
 .stadiumDetailWrap .information .homeTeamInfo .homeTeamInfoTop .favorite .fav {
   color: gold;
@@ -128,6 +129,7 @@
   }
   .stadiumDetailWrap .information .homeTeamInfo .homeTeamInfoTop .favorite {
     cursor: pointer;
+    margin-right: 0;
   }
   .stadiumDetailWrap .information .homeTeamInfo .homeTeamInfoTop .favorite .fav {
     color: gold;

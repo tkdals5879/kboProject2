@@ -25,24 +25,24 @@ function Myteam() {
   const favTeamRank = teamRank.find(rank => rank.teamName === favTeam?.name)
   // console.log(favTeamRank)
 
-  const [players,setPlayers]=useState([]);
-  const [error,setError]=useState('');
+  const [players, setPlayers] = useState([]);
+  const [error, setError] = useState('');
 
   const team = favTeam?.name;
-  console.log(team)
-  const date = new Date().toISOString().slice(0,10);
-  console.log(date)
+  // console.log(team)
+  const date = new Date().toISOString().slice(0, 10);
+  // console.log(date)
 
   useEffect(() => {
     axios.get(`http://localhost:8000/api/players?team=${team}&date=${date}`)
-    .then((res) => {
-      setPlayers(res.data);
-    })
-    .catch((err) => {
-      console.error(err);
-      setError('데이터를 불러오지 못했습니다.');
-    });
-  },[])
+      .then((res) => {
+        setPlayers(res.data);
+      })
+      .catch((err) => {
+        console.error(err);
+        setError('데이터를 불러오지 못했습니다.');
+      });
+  }, [])
 
 
 
@@ -72,7 +72,7 @@ function Myteam() {
             </div>
 
             <div className='rankTable'>
-              <TeamRankTable favTeamName={favTeam.name}/>
+              <TeamRankTable favTeamName={favTeam.name} />
             </div>
 
           </div>
@@ -80,133 +80,20 @@ function Myteam() {
         </div>
       ) : (<p>즐겨찾기한 구단이 없습니다!</p>)}
 
-      {/* <div className='playerListWrap'>
-        <h2>선수 명단</h2>
-        <Swiper
-          modules={[Navigation, Pagination]}
-          spaceBetween={50}
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-        >
-          <SwiperSlide>
-            <div className='playerBox'>
-              <figure>
-                <img src="./taein.webp" alt="taein" />
-              </figure>
-
-              <div>
-                <p>이름 : 원태인</p>
-                <p>생년월일 : 2000년 4월 6일</p>
-                <p>포지션 : 선발 투수</p>
-                <p>투타 : 우투좌타</p>
-              </div>
+      <div className='playerListWrap'>
+        {players.map((player, idx) => (
+          <div key={idx} className='playerBox'>
+            <div className='photo'></div>
+            <div className='playerInfo'>
+              <h2>이름 : {player.player_name}</h2>
+              <p>포지션 : {player.position} / {player.pitch_bat}</p>
+              <p>생년월일 : {player.birth_date}</p>
+              <p>키, 몸무게 : {player.physical}</p>
+              <p>등 번호 : {player.player_number}</p>
             </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className='playerBox'>
-              <figure>
-                <img src="./taein.webp" alt="taein" />
-              </figure>
-
-              <div>
-                <p>이름 : 원태인</p>
-                <p>생년월일 : 2000년 4월 6일</p>
-                <p>포지션 : 선발 투수</p>
-                <p>투타 : 우투좌타</p>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className='playerBox'>
-              <figure>
-                <img src="./taein.webp" alt="taein" />
-              </figure>
-
-              <div>
-                <p>이름 : 원태인</p>
-                <p>생년월일 : 2000년 4월 6일</p>
-                <p>포지션 : 선발 투수</p>
-                <p>투타 : 우투좌타</p>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className='playerBox'>
-              <figure>
-                <img src="./taein.webp" alt="taein" />
-              </figure>
-
-              <div>
-                <p>이름 : 원태인</p>
-                <p>생년월일 : 2000년 4월 6일</p>
-                <p>포지션 : 선발 투수</p>
-                <p>투타 : 우투좌타</p>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className='playerBox'>
-              <figure>
-                <img src="./taein.webp" alt="taein" />
-              </figure>
-
-              <div>
-                <p>이름 : 원태인</p>
-                <p>생년월일 : 2000년 4월 6일</p>
-                <p>포지션 : 선발 투수</p>
-                <p>투타 : 우투좌타</p>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className='playerBox'>
-              <figure>
-                <img src="./taein.webp" alt="taein" />
-              </figure>
-
-              <div>
-                <p>이름 : 원태인</p>
-                <p>생년월일 : 2000년 4월 6일</p>
-                <p>포지션 : 선발 투수</p>
-                <p>투타 : 우투좌타</p>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className='playerBox'>
-              <figure>
-                <img src="./taein.webp" alt="taein" />
-              </figure>
-
-              <div>
-                <p>이름 : 원태인</p>
-                <p>생년월일 : 2000년 4월 6일</p>
-                <p>포지션 : 선발 투수</p>
-                <p>투타 : 우투좌타</p>
-              </div>
-            </div>
-          </SwiperSlide>
-        </Swiper>
-        <button>더보기</button>
+          </div>
+        ))}
       </div>
-
-      <div className='matchScheduleWrap'>
-        <h2>경기 일정</h2>
-        <div className='matchScheduleBox'>
-          <div className='matchScheduleBoxMobile'>
-            <div className='matchScheduleLeft'>
-              <h3>04월</h3>
-            </div>
-            <div className='matchScheduleRight'>
-            </div>
-          </div>
-          <div className='matchScheduleBoxPc'>
-            <div className='matchScheduleLeft'></div>
-            <div className='matchScheduleRight'></div>
-          </div>
-        </div>
-      </div> */}
 
     </div>
   )

@@ -3,6 +3,7 @@
 }
 .myTeamWrap > h2 {
   padding-bottom: 3rem;
+  font-size: calc(1vw + 1rem);
 }
 .myTeamWrap .myTeamDisplay {
   display: flex;
@@ -43,60 +44,22 @@
   display: none;
 }
 .myTeamWrap .playerListWrap {
-  margin: 5rem 0;
-}
-.myTeamWrap .playerListWrap h2 {
-  margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 .myTeamWrap .playerListWrap .playerBox {
   display: flex;
-  gap: 12px;
-  padding-bottom: 1rem;
-}
-.myTeamWrap .playerListWrap .playerBox figure {
-  max-width: 30%;
-  height: 100%;
-  overflow: hidden;
-}
-.myTeamWrap .playerListWrap .playerBox > div {
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
   gap: 1rem;
 }
-.myTeamWrap .playerListWrap > button {
-  display: block;
-  margin-left: auto;
+.myTeamWrap .playerListWrap .playerBox:not(:last-child) {
+  margin-bottom: 2rem;
 }
-.myTeamWrap .matchScheduleWrap {
-  padding: 0 1rem;
+.myTeamWrap .playerListWrap .playerBox .photo {
+  width: 240px;
+  height: 300px;
+  background-color: salmon;
 }
-.myTeamWrap .matchScheduleWrap .matchScheduleBox {
-  width: 100%;
-}
-.myTeamWrap .matchScheduleWrap .matchScheduleBox .matchScheduleBoxPc {
-  display: none;
-}
-.myTeamWrap .matchScheduleWrap .matchScheduleBox .matchScheduleBoxMobile {
-  width: 100%;
-  display: flex;
-  margin-top: 3rem;
-}
-.myTeamWrap .matchScheduleWrap .matchScheduleBox .matchScheduleBoxMobile .matchScheduleLeft {
-  width: 25%;
-  height: 60vh;
-  padding: 1rem;
-  background-color: #21265F;
-  color: #fff;
-}
-.myTeamWrap .matchScheduleWrap .matchScheduleBox .matchScheduleBoxMobile .matchScheduleLeft h3 {
-  font-size: 1.5rem;
-  text-align: right;
-}
-.myTeamWrap .matchScheduleWrap .matchScheduleBox .matchScheduleBoxMobile .matchScheduleRight {
-  width: 100%;
-  height: 60vh;
-  background-color: #eee;
+.myTeamWrap .playerListWrap .playerBox .playerInfo {
+  line-height: 32px;
 }
 
 @media (min-width: 767px) {
