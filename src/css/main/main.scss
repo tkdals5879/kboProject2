@@ -1,43 +1,59 @@
 .mainWrap {
-    padding: 5rem 0;
+    max-width: 100%;
+    height: 100vh;
+    padding: 5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-    section {
-        padding: 0 1rem 1rem 1rem;
-
+    .resultBoxWrap {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
         h2 {
-            margin-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+        .notice{
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #ccc;
+            line-height: 20px;
+            text-align: center;
+        }
+        .resultBoxes{
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 2rem;
+            .resultBox{
+                width: 100%;
+                padding: 2rem .5rem;
+                background-color: salmon;
+            }
+        }
+    }
+
+    .resultTable {
+        h2 {
+            margin-bottom: .3rem;
             font-size: 1.5rem;
         }
 
-        .clubWrap {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
+        thead {
+            font-size: .5rem;
 
-            >div {
-                max-width: 100%;
-                display: flex;
-                justify-content: center;
-                padding: 1rem;
-                align-content: center;
-                border: 1px solid #ccc;
-                background-color: #eee;
-                border-radius: 10px;
-                position: relative;
-                z-index: 99;
+            th {
+                padding: 0.1rem;
+            }
+        }
 
-                .favorite {
-                    position: absolute;
-                    top: 4px;
-                    right: 4px;
-                    color: #969696;
-                    background-color: transparent;
-                    border: none;
-                    cursor: pointer;
+        tbody {
+            font-size: .6rem;
 
-                    .fav {
-                        color: gold;
-                    }
+            tr {
+                td {
+                    padding: .1rem;
                 }
             }
         }
@@ -46,19 +62,21 @@
 
 @media (min-width:767px) {
     .mainWrap {
-        padding: 5rem clamp(10rem, 5vw, 15rem);
+        .resultTable {
+            thead {
+                font-size: 1rem;
 
-        section {
-            .clubWrap {
-                grid-template-columns: repeat((3, 1fr));
+                th {
+                    padding: .3rem;
+                }
+            }
 
-                >div {
-                    transition: .1s;
-                    &:hover{
-                        background-color: #ccc;
-                    }
-                    .favorite {
-                        font-size: 1rem;
+            tbody {
+                font-size: .8rem;
+
+                tr {
+                    td {
+                        padding: .2rem;
                     }
                 }
             }
@@ -68,9 +86,23 @@
 
 @media (min-width:1200px) {
     .mainWrap {
-        section {
-            .clubWrap {
-                grid-template-columns: repeat(4, 1fr);
+        padding: 5rem 15rem;
+
+        .resultTable {
+            thead {
+                th {
+                    padding: 1.2rem;
+                }
+            }
+
+            tbody {
+                font-size: 1rem;
+
+                tr {
+                    td {
+                        padding: .5rem;
+                    }
+                }
             }
         }
     }

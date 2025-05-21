@@ -1,6 +1,20 @@
 @font-face {
-  font-family: 'KBO Dia Gothic';
+  font-family: 'KBO Bold';
   src: url('./font/KBO Dia Gothic_bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KBO Medium';
+  src: url('./font/KBO\ Dia\ Gothic_medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KBO Light';
+  src: url('./font/KBO Dia Gothic_light.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,7 +38,7 @@ code {
   margin: 0;
   box-sizing: border-box;
   user-select: none;
-  font-family: 'KBO Dia Gothic', sans-serif;
+  font-family: 'KBO Medium', sans-serif;
 }
 
 a{
@@ -39,4 +53,8 @@ ul{
 img{
   display: block;
   max-width: 100%;
+}
+
+h1,h2{
+  font-family: 'KBO Bold', sans-serif;;
 }

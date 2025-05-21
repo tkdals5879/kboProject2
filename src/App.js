@@ -2,13 +2,13 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 import Layout from './Layout';
-import Main from './pages/Main';
+import KboClub from './pages/KboClub';
 import Stadium from './pages/Stadium';
 import StadiumDetail from './pages/StadiumDetail';
 import Schedule from './pages/Schedule'
 import Ticketing from './pages/Ticketing'
 import Myteam from './pages/Myteam'
-import Result from './pages/Result'
+import Main from './pages/Main'
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -24,7 +24,7 @@ function App() {
           <Route path='/schedule' element={<Schedule/>}/>
           <Route path='/ticketing' element={<Ticketing/>}/>
           <Route path='/myteam' element={<Myteam/>}/>
-          <Route path='/result' element={<Result/>}/>
+          <Route path='/kboClub' element={<KboClub/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

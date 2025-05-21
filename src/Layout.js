@@ -4,11 +4,15 @@ import { faHouse } from '@fortawesome/free-solid-svg-icons'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate, Outlet, useLocation, Link } from 'react-router-dom';
 import Nav from './component/Nav';
+import { useSelector } from 'react-redux'
 
 import './css/layout/layout.css'
 
 
 function Layout() {
+
+  const teams = useSelector((state) => state.teams?.teams)
+  const favTeam = teams.find(team => team.isFavorite === true)
 
   const navigate = useNavigate();
   const location = useLocation()
@@ -39,12 +43,12 @@ function Layout() {
       <header className='fixedHeader'>
         {!isHome && <button className='goToBack' onClick={gotoBack}><FontAwesomeIcon icon={faArrowLeft} /></button>}
         <h1 onClick={gotoHome}> KBO Project</h1>
-        <ul className='topNavWrap'>
+        <ul className={`topNavWrap ${favTeam ? `team_${favTeam?.name}` : ''}`}>
+          <li><Link to={'/kboClub'} onClick={scrollToTop}>구단정보</Link></li>
           <li><Link to={'/stadium'} onClick={scrollToTop}>구장정보</Link></li>
+          <li><Link to={'/myteam'} onClick={scrollToTop}>나의구단</Link></li>
           <li><Link to={'/schedule'} onClick={scrollToTop}>경기일정</Link></li>
           <li><Link to={'/ticketing'} onClick={scrollToTop}>예매하기</Link></li>
-          <li><Link to={'/myteam'} onClick={scrollToTop}>나의구단</Link></li>
-          <li><Link to={'/result'} onClick={scrollToTop}>결과조회</Link></li>
         </ul>
         <button className='goToHome' onClick={gotoHome}><FontAwesomeIcon icon={faHouse} /></button>
       </header>

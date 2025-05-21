@@ -1,4 +1,39 @@
-.modalBg{
+@mixin mob_backgroundSet {
+    width: 50%;
+    height: 50%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@mixin teamName {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: top left;
+    animation: disappear 1s forwards;
+    animation-delay: .5s;
+
+    @keyframes disappear {
+        0% {
+            transform: translate(-50%, -50%);
+            scale: 1;
+            opacity: 1;
+        }
+
+        100% {
+            transform: translate(-50%, -50%);
+            scale: 1.4;
+            opacity: 0;
+            display: none
+        }
+    }
+}
+
+////////////////////////////////////////////////////////////////////
+
+.modalBg {
     position: fixed;
     top: 0;
     left: 0;
@@ -7,15 +42,161 @@
     background-color: #00000060;
     backdrop-filter: blur(3px);
     z-index: 999;
-    .modalWrap{
-        width: 80%;
-        height: 70vh;
+
+    .modalWrap {
+        width: 100%;
+        max-width: 360px;
+        padding: 1rem 1rem 2rem 1rem;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
-        padding: .5rem;
-        background-color: #333;
-        color: #fff;
+        transform: translate(-50%, -50%);
+
+        background-color: #F5F5F7;
+        color: #1D1D1F;
+        border-radius: 10px;
+        opacity: 0;
+        animation: fadeIn .5s forwards;
+        animation-delay: 1.5s;
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .head {
+            display: flex;
+            margin-bottom: 1rem;
+
+            h3 {
+                align-content: center;
+            }
+
+            button {
+                background-color: transparent;
+                border: none;
+                font-size: 1.2rem;
+                color: #000;
+                padding: .5rem;
+                margin-left: auto;
+                cursor: pointer;
+            }
+        }
+
+        .tableHead {
+            display: flex;
+            margin-bottom: 1rem;
+            padding-bottom: .5rem;
+            border-bottom: 1px solid #444;
+
+            p {
+                &:not(:last-child) {
+                    margin-right: 3rem;
+                }
+            }
+
+        }
+
+        .matchWrap {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            .matchBox {
+                display: flex;
+                position: relative;
+
+                p {
+                    font-size: .8rem;
+                    position: absolute;
+                }
+
+                .date {
+                    font-size: .6rem;
+                    left: 0;
+
+                }
+
+                .vs {
+                    left: 4.8rem;
+                }
+
+                .result {
+                    left: 9.25rem;
+                }
+
+                .runS {
+                    right: 5.5rem;
+                }
+
+                .runA {
+                    right: .8rem;
+                }
+            }
+        }
+    }
+
+    .KIA {
+        background-image: url(../../../public/modalKia.svg);
+        @include mob_backgroundSet();
+        @include teamName();
+
+    }
+
+    .SAMSUNG {
+        background-image: url(../../../public/modalSamsung.svg);
+        @include mob_backgroundSet();
+        @include teamName();
+    }
+
+    .LG {
+        background-image: url(../../../public/modalLg.svg);
+        @include mob_backgroundSet();
+        @include teamName();
+    }
+
+    .DOOSAN {
+        background-image: url(../../../public/modalDoosan.svg);
+        @include mob_backgroundSet();
+        @include teamName();
+    }
+
+    .KT {
+        background-image: url(../../../public/ktLogo.svg);
+        @include mob_backgroundSet();
+        @include teamName();
+    }
+
+    .SSG {
+        background-image: url(../../../public/modalSsg.svg);
+        @include mob_backgroundSet();
+        @include teamName();
+    }
+
+    .LOTTE {
+        background-image: url(../../../public/lotteLogo.svg);
+        @include mob_backgroundSet();
+        @include teamName();
+    }
+
+    .HANHWA {
+        background-image: url(../../../public/hanhwaLogo.svg);
+        @include mob_backgroundSet();
+        @include teamName();
+    }
+
+    .NC {
+        background-image: url(../../../public/modalNc.webp);
+        @include mob_backgroundSet();
+        @include teamName();
+    }
+
+    .KIWOOM {
+        background-image: url(../../../public/kiwoomLogo.svg);
+        @include mob_backgroundSet();
+        @include teamName();
     }
 }
+
+// 사이즈 미디어쿼리주기 ( 사이즈마다 width, height값 줘야함, 아래쪽 padding값 주는방법 생각하기 ), 마이팀 설정 시 tableHead색깔 바뀌게, 배경 사진 바뀌게 구현

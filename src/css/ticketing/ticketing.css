@@ -6,79 +6,92 @@
 }
 .ticketingWrap h2 {
   margin-left: 1rem;
-  font-size: calc(1vw + 1rem);
+  font-size-adjust: 1.5rem;
 }
-.ticketingWrap .linkWrap {
+.ticketingWrap .wrapper {
   width: 100%;
-  height: 150px;
-  padding: 0;
+  height: 50vh;
+  padding: 0 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+.ticketingWrap .wrapper a {
   position: relative;
 }
-.ticketingWrap .linkWrap h3 {
-  position: absolute;
-  top: 0.5rem;
-  left: 1rem;
+.ticketingWrap .wrapper a .noneMob {
+  display: none;
 }
-.ticketingWrap .linkWrap > div {
-  width: 100%;
-  height: 100%;
-  margin-left: auto;
-  box-shadow: 2px 2px 10px #ccc;
-  transition: 0.3s;
-}
-.ticketingWrap .linkWrap > div a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  position: relative;
-}
-.ticketingWrap .linkWrap > div a p {
-  display: block;
-  padding: 0.5rem 0;
+.ticketingWrap .wrapper a .mob {
   position: absolute;
   right: 1rem;
   bottom: 1rem;
-  color: #000;
-  font-weight: 600;
-  backdrop-filter: blur(3px);
+  font-size: 0.7rem;
+  z-index: 99;
 }
-.ticketingWrap .linkWrap .ticketlink {
-  background-image: url(../../../public/ticketlinkSite.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.ticketingWrap .wrapper .left {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
 }
-.ticketingWrap .linkWrap .interpark {
-  background-image: url(../../../public/interparkTicketSite.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.ticketingWrap .wrapper .right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.ticketingWrap .linkWrap .lotte {
-  background-image: url(../../../public/lotteTicketSite.gif);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+.ticketingWrap .wrapper .right .rightTop {
+  width: 100%;
+  height: 60%;
+  border-radius: 10px;
+  overflow: hidden;
 }
-.ticketingWrap .linkWrap .nc {
-  background-image: url(../../../public/ncTicketSite.png);
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: cover;
+.ticketingWrap .wrapper .right .rightTop > .linkWrap {
+  padding: 1rem;
+}
+.ticketingWrap .wrapper .right .rightBottom {
+  height: calc(40% - 1rem);
+  display: flex;
+  gap: 0.5rem;
+}
+.ticketingWrap .wrapper .right .rightBottom > div {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+.ticketingWrap .wrapper .linkWrap {
+  height: 100%;
+  position: relative;
+  background-color: #ccc;
+  padding: 1rem;
+}
+.ticketingWrap .wrapper .linkWrap h3 {
+  font-size: 0.8rem;
+  line-height: 16px;
+}
+.ticketingWrap .wrapper .ticketlink {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.ticketingWrap .wrapper .interpark {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.ticketingWrap .wrapper .lotte {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.ticketingWrap .wrapper .nc {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 @media (min-width: 1200px) {
   .ticketingWrap {
     padding: 5rem 15rem;
-  }
-  .ticketingWrap .linkWrap {
-    max-width: 1200px;
-    margin: auto;
-  }
-  .ticketingWrap .linkWrap:hover > div {
-    box-shadow: 10px 10px 10px #ccc;
-    border-radius: 20px;
   }
 }
 

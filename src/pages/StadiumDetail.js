@@ -89,11 +89,6 @@ function StadiumDetail() {
                 <iframe src={clickedTeam.iframeUrl} title={`${clickedTeam.stadiumName} 지도`}></iframe>
             </div>
 
-            <div className='foodWrap'>
-                <h2>판매 음식 정보</h2>
-                <div className='food'></div>
-            </div>
-
             {modalOpen && (
                 <Modal clickedTeam={clickedTeam} handleModalClose={handleModalClose}  teamId={teamId}/>
             )}

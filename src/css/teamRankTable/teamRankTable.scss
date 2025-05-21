@@ -1,6 +1,6 @@
 .teamRankTableWrap {
     max-width: 100%;
-    padding: 2rem;
+    padding: 1rem;
     box-sizing: border-box;
     overflow-x: auto;
 
@@ -12,10 +12,10 @@
     }
 
     table {
+        min-width: 400px;
         width: 100%;
         border-collapse: collapse;
         font-size: 1rem;
-        min-width: 450px;
         th,
         td {
             padding: .6rem;
@@ -39,6 +39,22 @@
         }
         .highlightTeam{
             background-color: goldenrod;
+        }
+    }
+}
+
+@media (min-width:1400px) {
+    .teamRankTableWrap{
+        table{
+            min-width: 600px;
+        }
+    }
+}
+
+@media (min-width:1600px) {
+    .teamRankTableWrap{
+        table{
+            min-width: 900px;
         }
     }
 }

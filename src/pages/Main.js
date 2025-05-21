@@ -1,50 +1,82 @@
-import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
-import { toggleFavorite } from '../redux/slice/teamsSlice'
-import { useNavigate } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 import '../css/main/main.css'
 
-
-
 function Main() {
+  const [rankings, setRankings] = useState([]);
+  const [results, setResults] = useState([]);
 
-  const navigate = useNavigate();
+  useEffect(() => {
+    axios.get('http://localhost:8000/api/ranking')
+      .then(response => {
+        setRankings(response.data);
+      })
+      .catch(error => {
+        console.error('순위 정보를 불러오는데 실패했습니다:', error);
+      });
+  }, []);
 
-  const dispatch = useDispatch()
-  const teams = useSelector((state) => state.teams.teams)
+  useEffect(() => {
+    axios.get('http://localhost:8000/api/result')
+      .then(response => {
+        setResults(response.data)
+        console.log(response.data)
+      })
+      .catch(error => console.error("API 호출 실패:", error))
+  }, [])
 
-  const favToogle = (teamId) => {
-    dispatch(toggleFavorite(teamId))
-  }
+  useEffect(() => { console.log("rankings > ", rankings) }, [rankings])
 
-  const gotoStadium = (teamId) => {
-    navigate(`/stadium/${teamId}`)
-    window.scrollTo({
-      top:0
-    })
-  }
+  // 열 제목 추출 (첫 번째 항목 기준)
+  const columns = rankings.length > 0 ? Object.keys(rankings[0]) : [];
 
   return (
-    <div className='mainWrap'>
+    <div className="mainWrap">
 
-      <section>
-        <h2>KBO 구단</h2>
+      <div className='resultBoxWrap'>
+        <h2>경기결과</h2>
+        <p className='notice'>이 웹사이트는 상업적 목적이 없는 포트폴리오용 사이트입니다. <br/>  
+        사용된 모든 자료의 저작권은 원저작자에게 있으며, 요청 시 즉시 삭제 조치하겠습니다.<br/>tkdals1457@naver.com</p>
 
-        <div className='clubWrap'>
-          {teams.map(team => (
-            <div key={team.id} onClick={() => gotoStadium(team.id)}>
-              <img src={`.${team.logo}`} alt={team.name + 'logo'} />
-              <button className='favorite' onClick={(e) => {e.stopPropagation(); favToogle(team.id);}}><FontAwesomeIcon icon={faStar} className={team.isFavorite ? 'fav' : ''} /></button>
-            </div>
-          ))}
+        <div className='resultBoxes'>
+        {results.map((result,idx) => (
+          <div className='resultBox' key={idx}>
+            <p>{result.날짜}</p>
+            <p>{result.경기}</p>
+            <p>{result.score.message}</p>
+          </div>
+        ))}
         </div>
-      </section>
+      </div>
 
+      <div className='resultTable'>
+        <h2>KBO 팀 순위</h2>
+        {rankings.length > 0 ? (
+          <table border="1" cellPadding="8" style={{ borderCollapse: 'collapse', width: '100%' }}>
+            <thead>
+              <tr>
+                {columns.map((col, idx) => (
+                  <th key={idx}>{col}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {rankings.map((team, index) => (
+                <tr key={index}>
+                  {columns.map((col, idx) => (
+                    <td key={idx}>{team[col]}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        ) : (
+          <p>순위 정보를 불러오는 중입니다...</p>
+        )}
+      </div>
     </div>
-  )
+  );
 }
 
 export default Main;

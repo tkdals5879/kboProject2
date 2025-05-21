@@ -9,15 +9,358 @@
   z-index: 999;
 }
 .modalBg .modalWrap {
-  width: 80%;
-  height: 70vh;
+  width: 100%;
+  max-width: 360px;
+  padding: 1rem 1rem 2rem 1rem;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: #F5F5F7;
+  color: #1D1D1F;
+  border-radius: 10px;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+  animation-delay: 1.5s;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.modalBg .modalWrap .head {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.modalBg .modalWrap .head h3 {
+  align-content: center;
+}
+.modalBg .modalWrap .head button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: #000;
   padding: 0.5rem;
-  background-color: #333;
-  color: #fff;
+  margin-left: auto;
+  cursor: pointer;
+}
+.modalBg .modalWrap .tableHead {
+  display: flex;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #444;
+}
+.modalBg .modalWrap .tableHead p:not(:last-child) {
+  margin-right: 3rem;
+}
+.modalBg .modalWrap .matchWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.modalBg .modalWrap .matchWrap .matchBox {
+  display: flex;
+  position: relative;
+}
+.modalBg .modalWrap .matchWrap .matchBox p {
+  font-size: 0.8rem;
+  position: absolute;
+}
+.modalBg .modalWrap .matchWrap .matchBox .date {
+  font-size: 0.6rem;
+  left: 0;
+}
+.modalBg .modalWrap .matchWrap .matchBox .vs {
+  left: 4.8rem;
+}
+.modalBg .modalWrap .matchWrap .matchBox .result {
+  left: 9.25rem;
+}
+.modalBg .modalWrap .matchWrap .matchBox .runS {
+  right: 5.5rem;
+}
+.modalBg .modalWrap .matchWrap .matchBox .runA {
+  right: 0.8rem;
+}
+.modalBg .KIA {
+  background-image: url(../../../public/modalKia.svg);
+  width: 50%;
+  height: 50%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: top left;
+  animation: disappear 1s forwards;
+  animation-delay: 0.5s;
+}
+@keyframes disappear {
+  0% {
+    transform: translate(-50%, -50%);
+    scale: 1;
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    scale: 1.4;
+    opacity: 0;
+    display: none;
+  }
+}
+.modalBg .SAMSUNG {
+  background-image: url(../../../public/modalSamsung.svg);
+  width: 50%;
+  height: 50%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: top left;
+  animation: disappear 1s forwards;
+  animation-delay: 0.5s;
+}
+@keyframes disappear {
+  0% {
+    transform: translate(-50%, -50%);
+    scale: 1;
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    scale: 1.4;
+    opacity: 0;
+    display: none;
+  }
+}
+.modalBg .LG {
+  background-image: url(../../../public/modalLg.svg);
+  width: 50%;
+  height: 50%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: top left;
+  animation: disappear 1s forwards;
+  animation-delay: 0.5s;
+}
+@keyframes disappear {
+  0% {
+    transform: translate(-50%, -50%);
+    scale: 1;
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    scale: 1.4;
+    opacity: 0;
+    display: none;
+  }
+}
+.modalBg .DOOSAN {
+  background-image: url(../../../public/modalDoosan.svg);
+  width: 50%;
+  height: 50%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: top left;
+  animation: disappear 1s forwards;
+  animation-delay: 0.5s;
+}
+@keyframes disappear {
+  0% {
+    transform: translate(-50%, -50%);
+    scale: 1;
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    scale: 1.4;
+    opacity: 0;
+    display: none;
+  }
+}
+.modalBg .KT {
+  background-image: url(../../../public/ktLogo.svg);
+  width: 50%;
+  height: 50%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: top left;
+  animation: disappear 1s forwards;
+  animation-delay: 0.5s;
+}
+@keyframes disappear {
+  0% {
+    transform: translate(-50%, -50%);
+    scale: 1;
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    scale: 1.4;
+    opacity: 0;
+    display: none;
+  }
+}
+.modalBg .SSG {
+  background-image: url(../../../public/modalSsg.svg);
+  width: 50%;
+  height: 50%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: top left;
+  animation: disappear 1s forwards;
+  animation-delay: 0.5s;
+}
+@keyframes disappear {
+  0% {
+    transform: translate(-50%, -50%);
+    scale: 1;
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    scale: 1.4;
+    opacity: 0;
+    display: none;
+  }
+}
+.modalBg .LOTTE {
+  background-image: url(../../../public/lotteLogo.svg);
+  width: 50%;
+  height: 50%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: top left;
+  animation: disappear 1s forwards;
+  animation-delay: 0.5s;
+}
+@keyframes disappear {
+  0% {
+    transform: translate(-50%, -50%);
+    scale: 1;
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    scale: 1.4;
+    opacity: 0;
+    display: none;
+  }
+}
+.modalBg .HANHWA {
+  background-image: url(../../../public/hanhwaLogo.svg);
+  width: 50%;
+  height: 50%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: top left;
+  animation: disappear 1s forwards;
+  animation-delay: 0.5s;
+}
+@keyframes disappear {
+  0% {
+    transform: translate(-50%, -50%);
+    scale: 1;
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    scale: 1.4;
+    opacity: 0;
+    display: none;
+  }
+}
+.modalBg .NC {
+  background-image: url(../../../public/modalNc.webp);
+  width: 50%;
+  height: 50%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: top left;
+  animation: disappear 1s forwards;
+  animation-delay: 0.5s;
+}
+@keyframes disappear {
+  0% {
+    transform: translate(-50%, -50%);
+    scale: 1;
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    scale: 1.4;
+    opacity: 0;
+    display: none;
+  }
+}
+.modalBg .KIWOOM {
+  background-image: url(../../../public/kiwoomLogo.svg);
+  width: 50%;
+  height: 50%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: top left;
+  animation: disappear 1s forwards;
+  animation-delay: 0.5s;
+}
+@keyframes disappear {
+  0% {
+    transform: translate(-50%, -50%);
+    scale: 1;
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    scale: 1.4;
+    opacity: 0;
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=modal.css.map */
