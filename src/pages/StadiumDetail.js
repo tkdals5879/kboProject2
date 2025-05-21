@@ -46,40 +46,6 @@ function StadiumDetail() {
         }
     }, [modalOpen])
 
-    useEffect(() => {
-        const imagesToPreload = [
-          '/hanhwa-stadium.jpg',
-          '/hanhwaLogo.svg',
-          '/kia-stadium.jpg',
-          '/kiaLogo.svg',
-          '/kiwoom-stadium.jpg',
-          '/kiwoomLogo.svg',
-          '/kt-stadium.webp',
-          '/ktLogo.svg',
-          '/lg-doosan-stadium.jpg',
-          '/lgLogo.svg',
-          '/lotte-stadium.jpeg',
-          '/lotteLogo.svg',
-          '/modalDoosan.svg',
-          '/modalKia.svg',
-          '/modalLg.svg',
-          '/modalNc.webp',
-          '/modalSamsung.svg',
-          '/modalSsg.svg',
-          '/nc-stadium.avif',
-          '/ncLogo.svg',
-          '/samsung-stadium.jpg',
-          '/samsungLogo.svg',
-          '/ssg-stadium.jpg',
-          '/ssgLogo.svg',
-        ];
-      
-        imagesToPreload.forEach((src) => {
-          const img = new Image();
-          img.src = process.env.PUBLIC_URL + src;
-        });
-      }, []);
-
     if (!clickedTeam) return <p>팀을 찾을 수 없습니다!</p>
 
     return (
