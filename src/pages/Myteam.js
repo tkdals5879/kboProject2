@@ -39,7 +39,6 @@ function Myteam() {
   // console.log(favTeamRank)
 
   const [players, setPlayers] = useState([]);
-  const [error, setError] = useState('');
 
   const team = favTeam?.name;
   // console.log(team)
@@ -52,9 +51,8 @@ function Myteam() {
       })
       .catch((err) => {
         console.error(err);
-        setError('데이터를 불러오지 못했습니다.');
       });
-  }, [])
+  }, [team])
 
   const [selectedPosition, setSelectedPosition] = useState('감독 및 코칭스텝')
 
