@@ -1,5 +1,4 @@
 import React from 'react'
-import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 import Layout from './Layout';
@@ -15,40 +14,6 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 function App() {
-
-  useEffect(() => {
-    const imagesToPreload = [
-      '/hanhwa-stadium.jpg',
-      '/hanhwaLogo.svg',
-      '/kia-stadium.jpg',
-      '/kiaLogo.svg',
-      '/kiwoom-stadium.jpg',
-      '/kiwoomLogo.svg',
-      '/kt-stadium.webp',
-      '/ktLogo.svg',
-      '/lg-doosan-stadium.jpg',
-      '/lgLogo.svg',
-      '/lotte-stadium.jpeg',
-      '/lotteLogo.svg',
-      '/modalDoosan.svg',
-      '/modalKia.svg',
-      '/modalLg.svg',
-      '/modalNc.webp',
-      '/modalSamsung.svg',
-      '/modalSsg.svg',
-      '/nc-stadium.avif',
-      '/ncLogo.svg',
-      '/samsung-stadium.jpg',
-      '/samsungLogo.svg',
-      '/ssg-stadium.jpg',
-      '/ssgLogo.svg',
-    ];
-  
-    imagesToPreload.forEach((src) => {
-      const img = new Image();
-      img.src = process.env.PUBLIC_URL + src;
-    });
-  }, []);
   
 
   return (
