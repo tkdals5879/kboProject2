@@ -8,10 +8,10 @@ import '../css/modal/modal.css'
 function Modal({ clickedTeam, handleModalClose }) {
 
     const teamName = clickedTeam.name
-    console.log("ㅁㄴㅇㅁㄴㅇㅁ", teamName)
+    // console.log("teamName", teamName)
 
     const modalProps = clickedTeam.modalProps
-    console.log("한글 구단 명", modalProps)
+    // console.log("한글 구단 명", modalProps)
 
     const handleBgClick = (e) => {
         if (e.target.className === 'modalBg') {
@@ -35,7 +35,7 @@ function Modal({ clickedTeam, handleModalClose }) {
             .catch(error => console.error("순위 정보를 불러오는데 실패했습니다.", error))
     }, [modalProps])
 
-    useEffect(() => { console.log(matches) }, [matches])
+    // useEffect(() => { console.log(matches) }, [matches])
 
     const teamColor = {
         KIA : '#EA0029',

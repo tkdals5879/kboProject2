@@ -17,7 +17,7 @@ function StadiumDetail() {
 
     const info = useSelector((state) => state.teamRank.teamRank)
     const clickedTeamInfo = info.find(infoTeam => infoTeam.teamName.toLowerCase() === teamId.toLowerCase());
-    useEffect(() => { console.log("clickedTeamInfo >> ", clickedTeamInfo) }, [clickedTeamInfo])
+    // useEffect(() => { console.log("clickedTeamInfo >> ", clickedTeamInfo) }, [clickedTeamInfo])
 
 
     const [modalOpen, setModalOpen] = useState(false)
@@ -35,7 +35,7 @@ function StadiumDetail() {
     }
 
     useEffect(() => {
-        console.log("모달 상태 > ", modalOpen);
+        // console.log("모달 상태 > ", modalOpen);
         if (modalOpen) {
             document.body.style.overflow = "hidden";
         } else {

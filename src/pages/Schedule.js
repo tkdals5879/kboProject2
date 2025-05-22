@@ -52,7 +52,7 @@ const Schedule = () => {
       awayTeam: awayTeam.trim()
     });
     setIsModalOpen(true);
-    console.log("clicked!", { homeTeam, awayTeam });
+    // console.log("clicked!", { homeTeam, awayTeam });
   };
 
   const handleModalClose = () => {
@@ -61,7 +61,6 @@ const Schedule = () => {
 
   const renderEventContent = (eventInfo) => {
     const isMobile = window.innerWidth <= 768;
-    console.log(eventInfo)
 
     const timeColor = {
       '2p': '#EA0029',

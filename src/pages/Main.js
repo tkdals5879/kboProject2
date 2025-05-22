@@ -26,7 +26,7 @@ function Main() {
       .catch(error => console.error("API 호출 실패:", error))
   }, [])
 
-  useEffect(() => { console.log("rankings > ", rankings) }, [rankings])
+  // useEffect(() => { console.log("rankings > ", rankings) }, [rankings])
 
   // 열 제목 추출 (첫 번째 항목 기준)
   const columns = rankings.length > 0 ? Object.keys(rankings[0]) : [];
