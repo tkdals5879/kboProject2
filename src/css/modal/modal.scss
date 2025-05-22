@@ -157,7 +157,7 @@
     }
 
     .DOOSAN {
-        background-image: url(../../../public/modalDoosan.webp);
+        background-image: url(../../../public/modalDoosan.svg);
         @include mob_backgroundSet();
         @include teamName();
     }

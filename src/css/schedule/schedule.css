@@ -1,6 +1,38 @@
 .scheduleWrap {
   padding: 5rem 1rem;
 }
+.scheduleWrap > div {
+  display: flex;
+  justify-content: space-between;
+}
+.scheduleWrap > div h2 {
+  margin-bottom: 5rem;
+}
+.scheduleWrap > div .dotColorInfo h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.scheduleWrap > div .dotColorInfo > div {
+  justify-self: end;
+}
+.scheduleWrap > div .dotColorInfo > div p {
+  font-size: 0.8rem;
+}
+.scheduleWrap > div .dotColorInfo > div p span {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+}
+.scheduleWrap > div .dotColorInfo > div p .red {
+  background-color: #EA0029;
+}
+.scheduleWrap > div .dotColorInfo > div p .green {
+  background-color: #00800A;
+}
+.scheduleWrap > div .dotColorInfo > div p .blue {
+  background-color: #0065B2;
+}
 .scheduleWrap .scheduleModalBg {
   width: 300px;
   height: 100px;
@@ -61,6 +93,24 @@
 }
 .scheduleWrap .scheduleModalBg .scheduleModalWrap button:hover {
   color: #6E6E73;
+}
+.scheduleWrap .fc-event-custom .fc-event-dot {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 100%;
+}
+
+@media (min-width: 767px) {
+  .scheduleWrap > div .dotColorInfo > div p span {
+    width: 6px;
+    height: 6px;
+  }
+  .scheduleWrap .fc-event-custom .fc-event-dot {
+    width: 6px;
+    height: 6px;
+  }
 }
 
 /*# sourceMappingURL=schedule.css.map */

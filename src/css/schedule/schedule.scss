@@ -1,6 +1,47 @@
 .scheduleWrap {
     padding: 5rem 1rem;
 
+    >div {
+        display: flex;
+        justify-content: space-between;
+
+        h2 {
+            margin-bottom: 5rem;
+        }
+
+        .dotColorInfo {
+            h4{
+                font-size: 1rem;
+                margin-bottom: .5rem;
+            }
+            >div{
+                justify-self: end;
+                p {
+                    font-size: .8rem;
+                    
+                    span {
+                        display: inline-block;
+                        width: 4px;
+                        height: 4px;
+                        border-radius: 100%;
+                    }
+                    
+                    .red {
+                        background-color: #EA0029;
+                    }
+                    
+                    .green {
+                        background-color: #00800A;
+                    }
+                    
+                    .blue {
+                        background-color: #0065B2;
+                    }
+                }
+            }
+        }
+    }
+
     .scheduleModalBg {
         width: 300px;
         height: 100px;
@@ -11,26 +52,31 @@
         transform: translate(-50%, -50%);
         z-index: 999;
         box-shadow: 0px 0px 10px #000;
-        .scheduleModalWrap{
+
+        .scheduleModalWrap {
             height: 100%;
             display: flex;
             justify-content: space-between;
             position: relative;
-            >div{
+
+            >div {
                 width: 100%;
                 height: 100%;
                 text-align: center;
-                &:hover{
+
+                &:hover {
                     background-color: #eee;
                 }
-                a{
+
+                a {
                     padding-top: 1rem;
                     display: block;
                     width: 100%;
                     height: 100%;
                     cursor: pointer;
                     position: relative;
-                    span{
+
+                    span {
                         width: 80%;
                         padding: .5rem;
                         background-color: #2C3D4F;
@@ -45,10 +91,12 @@
                     }
                 }
             }
-            .left{
+
+            .left {
                 border-right: 1px solid #000;
             }
-            button{
+
+            button {
                 position: absolute;
                 top: -2.5rem;
                 right: -.5rem;
@@ -56,9 +104,43 @@
                 border: none;
                 font-size: 2rem;
                 transition: .2s;
-                &:hover{
+
+                &:hover {
                     color: #6E6E73;
                 }
+            }
+        }
+    }
+
+    .fc-event-custom {
+        .fc-event-dot {
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            background-color: #000;
+            border-radius: 100%;
+        }
+    }
+}
+
+@media (min-width:767px){
+    .scheduleWrap{
+        >div{
+            .dotColorInfo{
+                >div{
+                    p{
+                        span{
+                            width: 6px;
+                            height: 6px;
+                        }
+                    }
+                }
+            }
+        }
+        .fc-event-custom {
+            .fc-event-dot {
+                width: 6px;
+                height: 6px;
             }
         }
     }

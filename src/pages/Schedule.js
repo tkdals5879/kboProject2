@@ -9,7 +9,6 @@ import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 
 import '../css/schedule/schedule.css'
 
-// 날짜, 시간, 팀 이름 파싱 함수
 const Schedule = () => {
 
   const ticketUrls = {
@@ -60,28 +59,65 @@ const Schedule = () => {
     setIsModalOpen(false)
   }
 
+  const renderEventContent = (eventInfo) => {
+    const isMobile = window.innerWidth <= 768;
+    console.log(eventInfo)
+
+    const timeColor = {
+      '2p': '#EA0029',
+      '5p': '#00800A',
+      '6:30p': '#0065B2'
+    }
+    const eventTime = eventInfo.timeText.toLowerCase();
+    const dotColor = timeColor[eventTime] || '#000'
+
+    return (
+      <div className="fc-event-custom">
+
+        <span className="fc-event-dot" style={{ marginRight: '4px', backgroundColor: dotColor }}></span>
+        <span style={{ fontSize: isMobile ? '.5rem' : '.7rem' }}>
+          {isMobile
+            ? eventInfo.event.title
+            : `${eventInfo.timeText} - ${eventInfo.event.title}`}
+        </span>
+      </div>
+    );
+  };
+
+
   return (
     <div style={{ maxWidth: '1500px', margin: 'auto' }} className='scheduleWrap'>
-      <h2>경기 일정</h2>
+      <div>
+        <h2>경기 일정</h2>
+        <div className='dotColorInfo'>
+          <h4>시간대 별 색상안내</h4>
+          <div>
+            <p><span className='red'></span> - 2pm</p>
+            <p><span className='green'></span> - 5pm</p>
+            <p><span className='blue'></span> - 6:30pm</p>
+          </div>
+        </div>
+      </div>
       <FullCalendar
         plugins={[dayGridPlugin]}
         initialView="dayGridMonth"
         events={events}
         height="auto"
         eventClick={handleEventClick}
+        eventContent={renderEventContent}
       />
       {isModalOpen &&
         <div className='scheduleModalBg'>
           <div className='scheduleModalWrap'>
             <button onClick={handleModalClose}><FontAwesomeIcon icon={faCircleXmark} /></button>
             <div className='left'>
-              <a href={ticketUrls[selectedGame.awayTeam]} target='_blank' rel="noopener noreferrer">Away : {[selectedGame.awayTeam]} <br/>
+              <a href={ticketUrls[selectedGame.awayTeam]} target='_blank' rel="noopener noreferrer">Away : {[selectedGame.awayTeam]} <br />
                 <span>티켓예매 바로가기 &#62; </span>
               </a>
             </div>
             <div className='right'>
-              <a href={ticketUrls[selectedGame.homeTeam]} target='_blank' rel="noopener noreferrer">Home : {[selectedGame.homeTeam]} <br/>
-              <span>티켓예매 바로가기 &#62; </span>
+              <a href={ticketUrls[selectedGame.homeTeam]} target='_blank' rel="noopener noreferrer">Home : {[selectedGame.homeTeam]} <br />
+                <span>티켓예매 바로가기 &#62; </span>
               </a>
             </div>
 

@@ -57,7 +57,7 @@ function Layout() {
         <Outlet />
       </main>
 
-      <footer className='fixedNav'>
+      <footer className='hamNav'>
         <Nav />
       </footer>
 
