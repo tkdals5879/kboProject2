@@ -9,7 +9,7 @@
     .myTeamDisplay {
         display: flex;
         flex-direction: column;
-        gap: 3rem;
+        gap: 1rem;
         padding: 1rem 0;
         border-bottom: 2px solid #efefef;
         margin-bottom: 3rem;
@@ -17,6 +17,7 @@
         .myTeamInfoA {
             padding: 1rem 0;
             color: #000;
+            border-bottom: 2px solid #efefef;
 
             img {
                 width: 70%;
@@ -160,6 +161,7 @@
                 padding-right: 1rem;
                 align-content: center;
                 transition: .2s;
+                border-bottom: none;
 
                 h3{
                     transition: .2s;

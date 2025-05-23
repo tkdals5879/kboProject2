@@ -8,7 +8,7 @@
 .myTeamWrap .myTeamDisplay {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 1rem;
   padding: 1rem 0;
   border-bottom: 2px solid #efefef;
   margin-bottom: 3rem;
@@ -16,6 +16,7 @@
 .myTeamWrap .myTeamDisplay .myTeamInfoA {
   padding: 1rem 0;
   color: #000;
+  border-bottom: 2px solid #efefef;
 }
 .myTeamWrap .myTeamDisplay .myTeamInfoA img {
   width: 70%;
@@ -118,6 +119,7 @@
     padding-right: 1rem;
     align-content: center;
     transition: 0.2s;
+    border-bottom: none;
   }
   .myTeamWrap .myTeamDisplay .myTeamInfoA h3 {
     transition: 0.2s;
