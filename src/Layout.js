@@ -50,8 +50,8 @@ function Layout() {
           <li><Link to={'/schedule'} onClick={scrollToTop}>경기일정</Link></li>
           <li><Link to={'/ticketing'} onClick={scrollToTop}>예매하기</Link></li>
         </ul>
-        <button className='goToHome' onClick={gotoHome}><FontAwesomeIcon icon={faHouse} /></button>
       </header>
+        <button className='goToHome' onClick={gotoHome}><FontAwesomeIcon icon={faHouse} /></button>
 
       <main className='pageContent'>
         <Outlet />

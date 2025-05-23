@@ -30,19 +30,24 @@
 .layoutWrap .fixedHeader .topNavWrap li {
   color: #000;
 }
-.layoutWrap .fixedHeader .goToHome {
-  margin-left: auto;
-  font-size: 24px;
-  background-color: transparent;
-  border: none;
-  color: #000;
-}
 .layoutWrap .fixedHeader .goToBack {
   font-size: 24px;
   padding: 1rem;
   color: #000;
   background-color: transparent;
   border: none;
+}
+.layoutWrap .goToHome {
+  font-size: 20px;
+  padding: 0.6rem;
+  background-color: #F5F5F7;
+  color: #1D1D1F;
+  border: none;
+  border-radius: 100%;
+  position: fixed;
+  right: 1rem;
+  bottom: 7rem;
+  z-index: 999;
 }
 .layoutWrap .hamNav {
   width: 100%;
