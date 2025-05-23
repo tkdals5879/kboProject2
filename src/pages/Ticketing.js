@@ -9,7 +9,7 @@ function Ticketing() {
       <h2>예매하기</h2>
       <div className='wrapper'>
         <div className='left'>
-          <a href="https://www.ticketlink.co.kr/sports" target='_blank' rel="noopener noreferrer" className='ticketlink'>
+          <a href="https://www.ticketlink.co.kr/sports" target='_blank' rel="noopener noreferrer">
             <p className='noneMob'>티켓링크 바로가기 &#62;</p>
             <p className='mob'>예매하기 &#62;</p>
             <div className='linkWrap'>
@@ -18,9 +18,9 @@ function Ticketing() {
         </div>
 
         <div className='right'>
-          <div className='rightTop'><a href="https://ticket.interpark.com/Contents/Sports" target='_blank' rel="noopener noreferrer" className='interpark'>
-          <p className='noneMob'> 인터파크 바로가기 &#62;</p>
-          <p className='mob'>예매하기 &#62;</p>
+          <div className='rightTop'><a href="https://ticket.interpark.com/Contents/Sports" target='_blank' rel="noopener noreferrer">
+            <p className='noneMob'> 인터파크 바로가기 &#62;</p>
+            <p className='mob'>예매하기 &#62;</p>
             <div className='linkWrap'>
               <h3>두산, 키움</h3>
               <div className='interpark'>
@@ -29,20 +29,24 @@ function Ticketing() {
           </div>
 
           <div className='rightBottom'>
-            <div className='linkWrap'><a href="https://www.giantsclub.com/html/index.asp?" target='_blank' rel="noopener noreferrer" className='lotte'>
-            <p className='noneMob'> 롯데자이언츠 바로가기 &#62;</p>
-            <p className='mob'>예매하기 &#62;</p>
-              <h3>롯데자이언츠</h3>
-              <div className='lotte'>
-              </div></a>
+            <div className='ncWrap'>
+              <div className='linkWrap'><a href="https://www.giantsclub.com/html/index.asp?" target='_blank' rel="noopener noreferrer">
+                <p className='noneMob'> 롯데자이언츠 바로가기 &#62;</p>
+                <p className='mob'>예매하기 &#62;</p>
+                <h3>롯데자이언츠</h3>
+                <div className='lotte'>
+                </div></a>
+              </div>
             </div>
 
-            <div className='linkWrap'><a href="https://www.ncdinos.com/" target='_blank' rel="noopener noreferrer" className='nc'>
-            <p className='noneMob'> NC 다이노스 바로가기 &#62;</p>
-            <p className='mob'>예매하기 &#62;</p>
-              <h3>NC 다이노스</h3>
-              <div className='nc'>
-              </div></a>
+            <div className='lotteWrap'>
+              <div className='linkWrap'><a href="https://www.ncdinos.com/" target='_blank' rel="noopener noreferrer">
+                <p className='noneMob'> NC 다이노스 바로가기 &#62;</p>
+                <p className='mob'>예매하기 &#62;</p>
+                <h3>NC 다이노스</h3>
+                <div className='nc'>
+                </div></a>
+              </div>
 
             </div>
           </div>

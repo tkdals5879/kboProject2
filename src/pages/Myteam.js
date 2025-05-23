@@ -47,7 +47,7 @@ function Myteam() {
     axios.get(`http://localhost:8000/api/players?team=${team}`)
       .then((res) => {
         setPlayers(res.data);
-        console.log(res.data)
+        // console.log(res.data)
       })
       .catch((err) => {
         console.error(err);

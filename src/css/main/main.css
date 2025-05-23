@@ -1,7 +1,7 @@
 .mainWrap {
   max-width: 100%;
-  height: 100vh;
-  padding: 5rem 1rem;
+  height: 100%;
+  padding: 5rem 1rem 10rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -16,6 +16,7 @@
 }
 .mainWrap .resultBoxWrap .notice {
   position: absolute;
+  width: 100%;
   bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
@@ -34,48 +35,58 @@
   background-color: salmon;
 }
 .mainWrap .resultTable h2 {
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
   font-size: 1.5rem;
 }
-.mainWrap .resultTable thead {
+.mainWrap .resultTable table {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.mainWrap .resultTable table thead {
   font-size: 0.5rem;
+  background-color: #ccc;
 }
-.mainWrap .resultTable thead th {
-  padding: 0.1rem;
+.mainWrap .resultTable table thead tr th {
+  padding: 0.5rem 0;
+  border: none;
 }
-.mainWrap .resultTable tbody {
+.mainWrap .resultTable table tbody {
+  border: none;
   font-size: 0.6rem;
 }
-.mainWrap .resultTable tbody tr td {
-  padding: 0.1rem;
+.mainWrap .resultTable table tbody tr td {
+  padding: 1rem 0.2rem;
+  border: none;
+  text-align: center;
+}
+.mainWrap .resultTable table tbody tr:nth-child(2n) {
+  background-color: #eee;
 }
 
 @media (min-width: 767px) {
-  .mainWrap .resultTable thead {
+  .mainWrap .resultTable table thead {
     font-size: 1rem;
   }
-  .mainWrap .resultTable thead th {
+  .mainWrap .resultTable table thead th {
     padding: 0.3rem;
   }
-  .mainWrap .resultTable tbody {
+  .mainWrap .resultTable table tbody {
     font-size: 0.8rem;
-  }
-  .mainWrap .resultTable tbody tr td {
-    padding: 0.2rem;
   }
 }
 @media (min-width: 1200px) {
   .mainWrap {
     padding: 5rem 15rem;
   }
-  .mainWrap .resultTable thead th {
+  .mainWrap .resultBoxWrap .notice {
+    bottom: 1rem;
+  }
+  .mainWrap .resultTable table thead th {
     padding: 1.2rem;
   }
-  .mainWrap .resultTable tbody {
+  .mainWrap .resultTable table tbody {
     font-size: 1rem;
-  }
-  .mainWrap .resultTable tbody tr td {
-    padding: 0.5rem;
   }
 }
 

@@ -31,7 +31,7 @@ const Schedule = () => {
   useEffect(() => {
     axios.get("http://localhost:8000/api/games")
       .then(res => {
-        console.log("백엔드 응답:", res.data);
+        console.log("백엔드 응답:", res.data.games);
 
         const rawGames = res.data.games || [];
 
@@ -60,7 +60,7 @@ const Schedule = () => {
   }
 
   const renderEventContent = (eventInfo) => {
-    const isMobile = window.innerWidth <= 768;
+    const isMobile = window.innerWidth <= 767;
 
     const timeColor = {
       '2p': '#EA0029',

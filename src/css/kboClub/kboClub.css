@@ -27,8 +27,9 @@
 }
 .kboClubWrap section .clubWrap > div .favorite {
   position: absolute;
-  top: 4px;
-  right: 4px;
+  top: 6px;
+  right: 6px;
+  font-size: 1.3rem;
   color: #969696;
   background-color: transparent;
   border: none;
