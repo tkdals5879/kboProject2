@@ -147,18 +147,59 @@
     padding: 1rem;
   }
   .myTeamWrap .myTeamDisplay .myTeamInfoB > div p {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
   }
   .myTeamWrap .myTeamDisplay .myTeamInfoB > div p span {
     font-size: 0.8rem;
   }
   .myTeamWrap .myTeamDisplay .myTeamInfoB .rankTable {
     display: block;
+    min-width: 400px;
+  }
+  .myTeamWrap .myTeamDisplay .myTeamInfoB .rankTable h2 {
+    margin-bottom: 0.5rem;
+  }
+  .myTeamWrap .myTeamDisplay .myTeamInfoB .rankTable .resultTable table {
+    border: none;
+  }
+  .myTeamWrap .myTeamDisplay .myTeamInfoB .rankTable .resultTable table th,
+  .myTeamWrap .myTeamDisplay .myTeamInfoB .rankTable .resultTable table td {
+    font-size: 0.5rem;
+    text-align: center;
+    border: none;
+  }
+  .myTeamWrap .myTeamDisplay .myTeamInfoB .rankTable .resultTable table th {
+    padding: 0.6rem 0.3rem;
+    background-color: #f2f2f2;
+    border-bottom: 2px solid #ddd;
+  }
+  .myTeamWrap .myTeamDisplay .myTeamInfoB .rankTable .resultTable table td {
+    padding: 0.6rem 0.3rem;
+  }
+  .myTeamWrap .myTeamDisplay .myTeamInfoB .rankTable .resultTable table tbody tr:hover {
+    background-color: #eee;
+  }
+  .myTeamWrap .myTeamDisplay .myTeamInfoB .rankTable .resultTable table .highlightTeam {
+    background-color: goldenrod;
   }
 }
 @media (min-width: 1200px) {
   .myTeamWrap {
     padding: 5rem 1rem;
+  }
+  .myTeamWrap .myTeamDisplay .myTeamInfoB > div p {
+    font-size: 1.2rem;
+  }
+  .myTeamWrap .myTeamDisplay .myTeamInfoB .rankTable {
+    min-width: 600px;
+  }
+  .myTeamWrap .myTeamDisplay .myTeamInfoB .rankTable .resultTable table th,
+  .myTeamWrap .myTeamDisplay .myTeamInfoB .rankTable .resultTable table td {
+    font-size: 0.8rem;
+    padding: 0.6rem;
+  }
+  .myTeamWrap .myTeamDisplay .myTeamInfoB .rankTable .resultTable table th {
+    font-size: 0.7rem;
   }
   .myTeamWrap .playerListWrap .playerList {
     grid-template-columns: repeat(3, 1fr);
@@ -167,6 +208,9 @@
 @media (min-width: 1600px) {
   .myTeamWrap {
     padding: 5rem 1rem;
+  }
+  .myTeamWrap .myTeamDisplay .myTeamInfoB .rankTable {
+    min-width: 900px;
   }
   .myTeamWrap .playerListWrap .playerList {
     grid-template-columns: repeat(4, 1fr);

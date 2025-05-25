@@ -115,6 +115,11 @@
     }
 }
 
+
+////////////////////////////////////////////////////////////////////
+
+
+
 @media (max-width:400px) {
     .myTeamWrap {
         .playerListWrap {
@@ -137,6 +142,7 @@
                 }
             }
         }
+
         .playerListWrap {
             .playerList {
                 grid-template-columns: repeat(2, 1fr);
@@ -163,7 +169,7 @@
                 transition: .2s;
                 border-bottom: none;
 
-                h3{
+                h3 {
                     transition: .2s;
                 }
 
@@ -173,13 +179,15 @@
                     transition: .2s;
                 }
 
-                &:hover{
+                &:hover {
                     box-shadow: 5px 1px 5px #efefef;
                 }
+
                 &:hover img {
                     scale: 1.01;
                 }
-                &:hover h3{
+
+                &:hover h3 {
                     font-size: 1.55rem;
                 }
             }
@@ -193,7 +201,7 @@
                     padding: 1rem;
 
                     p {
-                        font-size: 1.2rem;
+                        font-size: .8rem;
 
                         span {
                             font-size: .8rem;
@@ -203,6 +211,47 @@
 
                 .rankTable {
                     display: block;
+                    min-width: 400px;
+
+                    h2 {
+                        margin-bottom: .5rem;
+                    }
+
+                    .resultTable {
+
+                        table {
+                            border: none;
+
+                            th,
+                            td {
+                                font-size: .5rem;
+                                text-align: center;
+                                border: none;
+                            }
+
+                            th {
+                                padding: .6rem .3rem;
+                                background-color: #f2f2f2;
+                                border-bottom: 2px solid #ddd;
+                            }
+
+                            td{
+                                padding: .6rem .3rem;
+                            }
+
+                            tbody {
+                                tr {
+                                    &:hover {
+                                        background-color: #eee;
+                                    }
+                                }
+                            }
+
+                            .highlightTeam {
+                                background-color: goldenrod;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -212,6 +261,37 @@
 @media (min-width:1200px) {
     .myTeamWrap {
         padding: 5rem 1rem;
+
+        .myTeamDisplay {
+            .myTeamInfoB {
+                >div {
+                    p {
+                        font-size: 1.2rem;
+                    }
+                }
+
+                .rankTable {
+                    min-width: 600px;
+
+                    .resultTable {
+
+                        table {
+
+                            th,
+                            td {
+                                font-size: .8rem;
+                                padding: .6rem;
+                            }
+
+                            th {
+                                font-size: .7rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         .playerListWrap {
             .playerList {
                 grid-template-columns: repeat(3, 1fr);
@@ -223,6 +303,15 @@
 @media (min-width:1600px) {
     .myTeamWrap {
         padding: 5rem 1rem;
+
+        .myTeamDisplay {
+            .myTeamInfoB {
+                .rankTable {
+                    min-width: 900px;
+                }
+            }
+        }
+
         .playerListWrap {
             .playerList {
                 grid-template-columns: repeat(4, 1fr);

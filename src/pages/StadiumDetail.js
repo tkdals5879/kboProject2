@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import Modal from '../component/Modal';
@@ -15,9 +16,20 @@ function StadiumDetail() {
     const teams = useSelector((state) => state.teams.teams)
     const clickedTeam = teams.find(team => team.id === teamId)
 
-    const info = useSelector((state) => state.teamRank.teamRank)
-    const clickedTeamInfo = info.find(infoTeam => infoTeam.teamName.toLowerCase() === teamId.toLowerCase());
-    // useEffect(() => { console.log("clickedTeamInfo >> ", clickedTeamInfo) }, [clickedTeamInfo])
+    const [rankings, setRankings] = useState([]);
+
+    useEffect(() => {
+        axios.get('http://localhost:8000/api/ranking')
+            .then(response => {
+                setRankings(response.data);
+            })
+            .catch(error => {
+                console.error('순위 정보를 불러오는데 실패했습니다:', error);
+            });
+    }, []);
+
+    const clickedTeamInfo = rankings.find(ranking => ranking?.팀명 === clickedTeam?.modalProps)
+    console.log(clickedTeamInfo)
 
 
     const [modalOpen, setModalOpen] = useState(false)
@@ -72,11 +84,11 @@ function StadiumDetail() {
                             </div>
                             <div className='homeTeamInfoRight'>
                                 <h3>{clickedTeam.homeTeam}</h3>
-                                <p>순위 : {clickedTeamInfo.ranking}위</p>
-                                <p>전적 : {clickedTeamInfo.matchGame}전 {clickedTeamInfo.win}승 {clickedTeamInfo.draw}무 {clickedTeamInfo.lose}패</p>
-                                <p>승률 : {clickedTeamInfo.winPercent}</p>
-                                <p>최근 10G: {clickedTeamInfo.recent10Game}</p>
-                                <p>연속 : {clickedTeamInfo.winStraight}</p>
+                                <p>순위 : {clickedTeamInfo?.순위}위</p>
+                                <p>전적 : {clickedTeamInfo?.경기}전 {clickedTeamInfo?.승}승 {clickedTeamInfo?.무}무 {clickedTeamInfo?.패}패</p>
+                                <p>승률 : {clickedTeamInfo?.승률}</p>
+                                <p>최근 10G: {clickedTeamInfo?.최근10경기}</p>
+                                <p>연속 : {clickedTeamInfo?.연속}</p>
                                 <span onClick={handleModalOpen}>더보기</span>
                             </div>
                         </div>

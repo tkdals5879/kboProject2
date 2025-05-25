@@ -14,6 +14,9 @@
 }
 .scheduleWrap > div .dotColorInfo > div {
   justify-self: end;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 .scheduleWrap > div .dotColorInfo > div p {
   font-size: 0.8rem;
@@ -23,6 +26,7 @@
   width: 4px;
   height: 4px;
   border-radius: 100%;
+  margin-bottom: 2px;
 }
 .scheduleWrap > div .dotColorInfo > div p .red {
   background-color: #EA0029;
@@ -112,6 +116,7 @@
   .scheduleWrap > div .dotColorInfo > div p span {
     width: 6px;
     height: 6px;
+    margin-bottom: 0;
   }
   .scheduleWrap .fc-event-custom .fc-event-dot {
     width: 6px;
@@ -121,6 +126,11 @@
 @media (min-width: 768px) and (max-width: 900px) {
   .scheduleWrap .fc-event-custom span:last-child {
     font-size: 0.6rem !important;
+  }
+}
+@media (min-width: 1024px) {
+  .scheduleWrap > div .dotColorInfo {
+    display: none;
   }
 }
 

@@ -17,6 +17,9 @@
 
             >div {
                 justify-self: end;
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
 
                 p {
                     font-size: .8rem;
@@ -26,6 +29,7 @@
                         width: 4px;
                         height: 4px;
                         border-radius: 100%;
+                        margin-bottom: 2px;
                     }
 
                     .red {
@@ -126,11 +130,16 @@
     }
 }
 
+
+////////////////////////////////////////////////////////////////////
+
+
+
 @media (max-width:400px) {
     .scheduleWrap {
-        .fc-event-custom{
-            span{
-                &:last-child{
+        .fc-event-custom {
+            span {
+                &:last-child {
                     font-size: .4rem !important;
                 }
             }
@@ -147,6 +156,7 @@
                         span {
                             width: 6px;
                             height: 6px;
+                            margin-bottom: 0;
                         }
                     }
                 }
@@ -164,11 +174,21 @@
 
 @media (min-width:768px) and (max-width:900px) {
     .scheduleWrap {
-        .fc-event-custom{
-            span{
-                &:last-child{
+        .fc-event-custom {
+            span {
+                &:last-child {
                     font-size: .6rem !important;
                 }
+            }
+        }
+    }
+}
+
+@media (min-width:1024px) {
+    .scheduleWrap {
+        >div {
+            .dotColorInfo {
+                display: none;
             }
         }
     }

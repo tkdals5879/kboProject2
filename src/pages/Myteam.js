@@ -4,16 +4,8 @@ import TeamRankTable from '../component/TeamRankTable';
 import axios from 'axios'
 
 import '../css/myTeam/myTeam.css'
-import 'swiper/css'
-import 'swiper/css/pagination'
-import 'swiper/css/navigation'
-import 'swiper/css/scrollbar'
-
-
 
 function Myteam() {
-
-  const teamRank = useSelector((state) => state.teamRank.teamRank)
   const teams = useSelector((state) => state.teams.teams)
 
   const favTeam = teams.find(team => team.isFavorite === true)
@@ -35,14 +27,11 @@ function Myteam() {
   const darkColorTeam = ['DOOSAN', 'LOTTE', 'KIWOOM']
   const isDarkColorTeam = darkColorTeam.includes(favTeam?.name)
 
-  const favTeamRank = teamRank.find(rank => rank.teamName === favTeam?.name)
-  // console.log(favTeamRank)
-
   const [players, setPlayers] = useState([]);
 
   const team = favTeam?.name;
-  // console.log(team)
 
+  ////////// 선수단 정보 받아오는 api //////////
   useEffect(() => {
     axios.get(`http://localhost:8000/api/players?team=${team}`)
       .then((res) => {
@@ -53,6 +42,8 @@ function Myteam() {
         console.error(err);
       });
   }, [team])
+  ////////// 선수단 정보 받아오는 api //////////
+
 
   const [selectedPosition, setSelectedPosition] = useState('감독 및 코칭스텝')
 
@@ -61,6 +52,22 @@ function Myteam() {
   const infielders = players.filter(player => player.position === '내야수')
   const outfielders = players.filter(player => player.position === '외야수')
 
+  ////////// 팀 랭킹 받아오는 api, myTeamInfoB Data //////////
+  const [rankings, setRankings] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:8000/api/ranking')
+      .then(response => {
+        setRankings(response.data);
+      })
+      .catch(error => {
+        console.error('순위 정보를 불러오는데 실패했습니다:', error);
+      });
+  }, []);
+
+  const myTeamInfo = rankings.find(ranking => ranking?.팀명 === favTeam?.modalProps)
+
+  ////////// 팀 랭킹 받아오는 api, myTeamInfoB Data //////////
 
 
   return (
@@ -80,17 +87,18 @@ function Myteam() {
             <div className='myTeamInfoB'>
 
               <div>
-                <p>현재 랭킹 : {favTeamRank.ranking}위</p>
-                <p>경기전적 : {favTeamRank.win}승{favTeamRank.draw}무{favTeamRank.lose}패 </p>
-                <p>승률 : {favTeamRank.winPercent}</p>
-                <p>연속 : {favTeamRank.winStraight}</p>
-                <p>홈 경기전적: {favTeamRank.homeMatchResult} <span>(승,무,패)</span></p>
-                <p>원정 경기전적 : {favTeamRank.awayMatchResult} <span>(승,무,패)</span></p>
-                <p>최근 10G : {favTeamRank.recent10Game}</p>
+                <p>현재 랭킹 : {myTeamInfo?.순위}위</p>
+                <p>경기전적 : {myTeamInfo?.승}승{myTeamInfo?.무}무{myTeamInfo?.패}패 </p>
+                <p>승률 : {myTeamInfo?.승률}</p>
+                <p>연속 : {myTeamInfo?.연속}</p>
+                <p>홈 경기전적: {myTeamInfo?.홈} <span>(승,무,패)</span></p>
+                <p>원정 경기전적 : {myTeamInfo?.원정} <span>(승,무,패)</span></p>
+                <p>최근 10G : {myTeamInfo?.최근10경기}</p>
               </div>
 
               <div className='rankTable'>
-                <TeamRankTable favTeamName={favTeam.name} />
+                <h2>2025 KBO 순위표</h2>
+                <TeamRankTable favTeam={favTeam}/>
               </div>
 
             </div>

@@ -34,11 +34,11 @@
 ////////////////////////////////////////////////////////////////////
 
 .modalBg {
+    width: 100%;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     background-color: #00000060;
     backdrop-filter: blur(3px);
     z-index: 999;
@@ -46,7 +46,7 @@
     .modalWrap {
         width: 100%;
         max-width: 360px;
-        padding: 1rem 1rem 2rem 1rem;
+        padding: 1rem;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -101,11 +101,12 @@
         .matchWrap {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
 
             .matchBox {
+                height: 25px;
                 display: flex;
                 position: relative;
+                align-items: center;
 
                 p {
                     font-size: .8rem;
@@ -199,4 +200,43 @@
     }
 }
 
-// 사이즈 미디어쿼리주기 ( 사이즈마다 width, height값 줘야함, 아래쪽 padding값 주는방법 생각하기 ), 마이팀 설정 시 tableHead색깔 바뀌게, 배경 사진 바뀌게 구현
+
+////////////////////////////////////////////////////////////////////
+
+
+
+@media (min-width:767px) {
+    .modalBg{
+        .modalWrap{
+            max-width: 600px;
+            .tableHead{
+                p {
+                    &:not(:last-child) {
+                        margin-right: 6.7rem;
+                    }
+                }
+            }
+            .matchWrap{
+                .matchBox{
+                    height: 25px;
+
+                    .date{
+                        font-size: .7rem;
+                    }
+                    .vs{
+                        left: 8.5rem;
+                    }
+                    .result{
+                        left: 16.5rem;
+                    }
+                    .runS{
+                        right: 9.4rem;
+                    }
+                    &:hover{
+                        background-color: #eee;
+                    }
+                }
+            }
+        }
+    }
+}

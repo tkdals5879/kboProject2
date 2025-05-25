@@ -1,9 +1,9 @@
 .modalBg {
+  width: 100%;
+  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   background-color: rgba(0, 0, 0, 0.3764705882);
   backdrop-filter: blur(3px);
   z-index: 999;
@@ -11,7 +11,7 @@
 .modalBg .modalWrap {
   width: 100%;
   max-width: 360px;
-  padding: 1rem 1rem 2rem 1rem;
+  padding: 1rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -56,11 +56,12 @@
 .modalBg .modalWrap .matchWrap {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
 }
 .modalBg .modalWrap .matchWrap .matchBox {
+  height: 25px;
   display: flex;
   position: relative;
+  align-items: center;
 }
 .modalBg .modalWrap .matchWrap .matchBox p {
   font-size: 0.8rem;
@@ -360,6 +361,33 @@
     scale: 1.4;
     opacity: 0;
     display: none;
+  }
+}
+
+@media (min-width: 767px) {
+  .modalBg .modalWrap {
+    max-width: 600px;
+  }
+  .modalBg .modalWrap .tableHead p:not(:last-child) {
+    margin-right: 6.7rem;
+  }
+  .modalBg .modalWrap .matchWrap .matchBox {
+    height: 25px;
+  }
+  .modalBg .modalWrap .matchWrap .matchBox .date {
+    font-size: 0.7rem;
+  }
+  .modalBg .modalWrap .matchWrap .matchBox .vs {
+    left: 8.5rem;
+  }
+  .modalBg .modalWrap .matchWrap .matchBox .result {
+    left: 16.5rem;
+  }
+  .modalBg .modalWrap .matchWrap .matchBox .runS {
+    right: 9.4rem;
+  }
+  .modalBg .modalWrap .matchWrap .matchBox:hover {
+    background-color: #eee;
   }
 }
 

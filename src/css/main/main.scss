@@ -1,29 +1,20 @@
 .mainWrap {
     max-width: 100%;
     height: 100%;
-    padding: 5rem 1rem 10rem 1rem;
+    padding: 5rem 1rem 15rem 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
 
     .resultBoxWrap {
         display: flex;
         flex-direction: column;
         gap: 3rem;
+        margin-bottom: 5rem;
 
         h2 {
             font-size: 1.5rem;
-        }
-
-        .notice {
-            position: absolute;
-            width: 100%;
-            bottom: 1rem;
-            left: 50%;
-            transform: translateX(-50%);
-            color: #ccc;
-            line-height: 20px;
-            text-align: center;
         }
 
         .resultBoxes {
@@ -39,63 +30,88 @@
         }
     }
 
-    .resultTable {
+    .mainResultWrap {
+        
         h2 {
             margin-bottom: .5rem;
             font-size: 1.5rem;
         }
 
-        table {
-            border: none;
-            border-radius: 10px;
-            overflow: hidden;
+        .resultTable {
 
-            thead {
-                font-size: .5rem;
-                background-color: #ccc;
+            table {
+                border: none;
+                border-radius: 10px;
+                overflow: hidden;
 
-                tr {
-                    th {
-                        padding: .5rem 0;
-                        border: none;
+                thead {
+                    font-size: .5rem;
+                    background-color: #ccc;
+
+                    tr {
+                        th {
+                            padding: .5rem 0;
+                            border: none;
+                        }
                     }
                 }
-            }
 
-            tbody {
-                border: none;
-                font-size: .6rem;
+                tbody {
+                    border: none;
+                    font-size: .6rem;
 
-                tr {
-                    td {
-                        padding: 1rem .2rem;
-                        border: none;
-                        text-align: center;
-                    }
-                    &:nth-child(2n){
-                        background-color: #eee;
+                    tr {
+                        td {
+                            padding: 1rem .2rem;
+                            border: none;
+                            text-align: center;
+                        }
+
+                        &:nth-child(2n) {
+                            background-color: #eee;
+                        }
                     }
                 }
             }
         }
     }
+
+    .notice {
+        position: absolute;
+        width: 100%;
+        bottom: 5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #ccc;
+        line-height: 20px;
+        text-align: center;
+    }
+
 }
+
+
+////////////////////////////////////////////////////////////////////
+
+
 
 @media (min-width:767px) {
     .mainWrap {
-        .resultTable {
-            table {
+        .mainResultWrap {
 
-                thead {
-                    font-size: 1rem;
+            .resultTable {
+                table {
 
-                    th {
-                        padding: .3rem;
+                    thead {
+                        font-size: 1rem;
+
+                        th {
+                            padding: .3rem;
+                        }
                     }
-                }
 
-                tbody {
-                    font-size: .8rem;
+                    tbody {
+                        font-size: .8rem;
+                    }
                 }
             }
         }
@@ -106,23 +122,26 @@
     .mainWrap {
         padding: 5rem 15rem;
 
-        .resultBoxWrap{
-            .notice{
+        .resultBoxWrap {
+            .notice {
                 bottom: 1rem;
             }
         }
 
-        .resultTable {
-            table {
+        .mainResultWrap {
 
-                thead {
-                    th {
-                        padding: 1.2rem;
+            .resultTable {
+                table {
+
+                    thead {
+                        th {
+                            padding: 1.2rem;
+                        }
                     }
-                }
 
-                tbody {
-                    font-size: 1rem;
+                    tbody {
+                        font-size: 1rem;
+                    }
                 }
             }
         }
