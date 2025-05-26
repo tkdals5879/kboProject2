@@ -98,7 +98,7 @@
 
 @media (min-width: 767px) {
   .stadiumWrap {
-    padding: 5rem;
+    padding: 5rem 1rem;
   }
   .stadiumWrap h2 {
     font-size: 1.5rem;
@@ -139,7 +139,7 @@
 }
 @media (min-width: 1200px) {
   .stadiumWrap {
-    padding: 5rem 15rem;
+    padding: 5rem 10rem;
   }
 }
 

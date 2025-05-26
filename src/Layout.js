@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse } from '@fortawesome/free-solid-svg-icons'
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
-import { useNavigate, Outlet, useLocation, Link } from 'react-router-dom';
+import { useNavigate, Outlet, Link } from 'react-router-dom';
 import Nav from './component/Nav';
 import { useSelector } from 'react-redux'
+import { AnimatePresence } from 'framer-motion';
 
 import './css/layout/layout.css'
 
@@ -13,20 +13,25 @@ function Layout() {
 
   const teams = useSelector((state) => state.teams?.teams)
   const favTeam = teams.find(team => team.isFavorite === true)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const teamColor = {
+    KIA: '#EA0029',
+    SAMSUNG: '#0065B2',
+    LG: '#C30452',
+    DOOSAN: '#1A1748',
+    KT: '#ED1A23',
+    SSG: '#CE0E2D',
+    LOTTE: '#041E42',
+    HANHWA: '#FC4E00',
+    NC: '#C79F79',
+    KIWOOM: '#570514',
+  }
 
   const navigate = useNavigate();
-  const location = useLocation()
-  const isHome = location.pathname === '/';
 
   const gotoHome = () => {
     navigate('/')
-    window.scrollTo({
-      top: 0
-    })
-  }
-
-  const gotoBack = () => {
-    navigate(-1)
     window.scrollTo({
       top: 0
     })
@@ -38,11 +43,17 @@ function Layout() {
     })
   }
 
+  const handleMenuToggle = () => {
+    setIsMenuOpen(prev => !prev)
+  }
+  const handleMenuClose = () => {
+    setIsMenuOpen(false)
+  }
+
   return (
     <div className='layoutWrap'>
       <header className='fixedHeader'>
-        {!isHome && <button className='goToBack' onClick={gotoBack}><FontAwesomeIcon icon={faArrowLeft} /></button>}
-        <h1 onClick={gotoHome}> KBO Project</h1>
+        <h1 onClick={gotoHome} style={{ color: teamColor[favTeam?.name] || '#000' }} > KBO Project</h1>
         <ul className={`topNavWrap ${favTeam ? `team_${favTeam?.name}` : ''}`}>
           <li><Link to={'/kboClub'} onClick={scrollToTop}>구단정보</Link></li>
           <li><Link to={'/stadium'} onClick={scrollToTop}>구장정보</Link></li>
@@ -50,16 +61,26 @@ function Layout() {
           <li><Link to={'/schedule'} onClick={scrollToTop}>경기일정</Link></li>
           <li><Link to={'/ticketing'} onClick={scrollToTop}>예매하기</Link></li>
         </ul>
-      </header>
+
+        <div className='hamNav'>
+          <div className='ham' onClick={handleMenuToggle}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <AnimatePresence>
+            {isMenuOpen && <Nav handleMenuClose={handleMenuClose} />}
+          </AnimatePresence>
+        </div>
+
         <button className='goToHome' onClick={gotoHome}><FontAwesomeIcon icon={faHouse} /></button>
+
+      </header>
 
       <main className='pageContent'>
         <Outlet />
       </main>
-
-      <footer className='hamNav'>
-        <Nav />
-      </footer>
 
     </div>
   )

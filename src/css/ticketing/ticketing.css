@@ -70,7 +70,7 @@
   padding: 1rem;
 }
 .ticketingWrap .wrapper .linkWrap h3 {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   line-height: 16px;
 }
 .ticketingWrap .wrapper .ticketlink {
@@ -95,6 +95,9 @@
 }
 
 @media (min-width: 767px) {
+  .ticketingWrap .wrapper .linkWrap h3 {
+    font-size: 0.8rem;
+  }
   .ticketingWrap .wrapper .left {
     transition: 0.3s;
   }

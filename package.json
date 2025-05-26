@@ -19,8 +19,9 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.9.0",
     "fontawesome": "^5.6.3",
-    "framer-motion": "^12.7.4",
+    "framer-motion": "^12.13.0",
     "install": "^0.13.0",
+    "moment": "^2.29.4",
     "npm": "^11.3.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -31,9 +32,7 @@
     "redux": "^5.0.1",
     "sass": "^1.86.3",
     "swiper": "^11.2.6",
-    "web-vitals": "^2.1.4",
-    "moment": "^2.29.4"
-    
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",

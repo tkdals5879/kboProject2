@@ -38,9 +38,9 @@ function Main() {
         <div className='resultBoxes'>
           {results.map((result, idx) => (
             <div className='resultBox' key={idx}>
-              <p>{result.날짜}</p>
-              <p>{result.경기}</p>
-              <p>{result.score.message}</p>
+              <p>{result?.날짜}</p>
+              <p>{result?.경기}</p>
+              <p>{result?.score?.message}</p>
             </div>
           ))}
         </div>

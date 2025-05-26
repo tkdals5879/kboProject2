@@ -79,7 +79,7 @@
 }
 @media (min-width: 1200px) {
   .mainWrap {
-    padding: 5rem 15rem;
+    padding: 5rem 15rem 12rem 15rem;
   }
   .mainWrap .resultBoxWrap .notice {
     bottom: 1rem;

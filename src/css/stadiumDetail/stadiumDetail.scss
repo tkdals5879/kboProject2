@@ -14,9 +14,14 @@
             align-items: end;
             margin-bottom: 1rem;
 
+            h1 {
+                font-size: 1.5rem;
+            }
+
             p {
                 color: #ccc;
                 margin-bottom: 6px;
+                font-size: .8rem;
             }
         }
 
@@ -30,26 +35,31 @@
         }
 
         .homeTeamInfo {
-            margin: 2rem auto;
+            margin: 5rem auto;
 
-            .homeTeamInfoTop{
+            .homeTeamInfoTop {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 margin-bottom: 1rem;
+
                 h2 {
                     padding-left: 1rem;
+                    font-size: 1.3rem;
                 }
-                button{
-                    font-size: 1.5rem;
+
+                button {
+                    font-size: 1.2rem;
                     background-color: transparent;
                     border: none;
                     color: #969696;
                 }
-                .favorite{
+
+                .favorite {
                     cursor: pointer;
                     margin-right: 1rem;
-                    .fav{
+
+                    .fav {
                         color: gold;
                     }
                 }
@@ -63,7 +73,7 @@
                 grid-template-columns: repeat(2, 1fr);
                 column-gap: 24px;
 
-                .homeTeamInfoLeft{
+                .homeTeamInfoLeft {
                     align-content: center;
                 }
 
@@ -73,9 +83,13 @@
                     gap: 12px;
                     align-self: center;
 
-                    p{
+                    h3 {
+                        font-size: 1rem;
+                    }
+
+                    p {
                         color: #6E6E73;
-                        font-weight: 500;
+                        font-size: .8rem;
                     }
 
                     span {
@@ -94,6 +108,7 @@
 
         h2 {
             margin-bottom: 2rem;
+            font-size: 1.3rem;
         }
 
         iframe {
@@ -110,18 +125,18 @@
 
 @media (min-width:767px) {
     .stadiumDetailWrap {
-        padding: 5rem 10rem;
+        padding: 5rem 1rem;
 
         .information {
 
-            .text{
+            .text {
                 padding: 0;
             }
 
             >div:not(:first-child) {
                 display: flex;
                 flex-direction: column;
-                gap: 3rem;
+                gap: 5rem;
             }
 
             .stadiumPicture {
@@ -137,15 +152,18 @@
                 padding: 1rem;
                 padding-bottom: 2rem;
 
-                .homeTeamInfoTop{
+                .homeTeamInfoTop {
                     margin-bottom: 2rem;
+
                     h2 {
-                        font-size: calc(1vw + 0.7rem);
+                        font-size: 1.5rem;
                     }
-                    .favorite{
+
+                    .favorite {
                         cursor: pointer;
                         margin-right: 0;
-                        .fav{
+
+                        .fav {
                             color: gold;
                         }
                     }
@@ -154,33 +172,31 @@
                 >div:not(:first-child) {
                     border: none;
                     padding: 0;
-                }
 
-                .homeTeamInfoLeft {
-                    width: 20vw;
-                    object-fit: contain;
-                    margin: auto;
+                    .homeTeamInfoLeft {
+                        width: 20vw;
+                        object-fit: contain;
+                        margin: auto;
 
-                    img {
-                        width: 100%;
-                    }
-                }
-
-                .homeTeamInfoRight {
-                    gap: 24px;
-
-                    h3 {
-                        font-size: calc(1vw + .5rem);
-                        margin-bottom: 1rem;
+                        img {
+                            width: 100%;
+                        }
                     }
 
-                    p {
-                        font-size: 1.2rem;
-                        font-weight: 600;
-                    }
+                    .homeTeamInfoRight {
 
-                    span {
-                        margin-top: 2rem;
+                        h3 {
+                            font-size: 1.2rem;
+                            margin-bottom: 1rem;
+                        }
+
+                        p {
+                            font-size: 1rem;
+                        }
+
+                        span {
+                            margin-top: 2rem;
+                        }
                     }
                 }
             }
@@ -189,9 +205,14 @@
         .location {
             margin-top: 5rem;
             padding: 0;
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
         }
 
-        .foodWrap{
+        .foodWrap {
             padding: 0;
         }
 

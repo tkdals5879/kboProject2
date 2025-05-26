@@ -21,16 +21,20 @@
                 padding: 1rem;
                 align-content: center;
                 border: 1px solid #ccc;
-                background-color: #eee;
+                background-color: #efefef;
                 border-radius: 10px;
                 position: relative;
                 z-index: 99;
 
+                img{
+                    max-width: 80%;
+                }
+
                 .favorite {
                     position: absolute;
-                    top: 6px;
-                    right: 6px;
-                    font-size: 1.3rem;
+                    top: 8px;
+                    right: 8px;
+                    font-size: 1rem;
                     color: #969696;
                     background-color: transparent;
                     border: none;
@@ -52,7 +56,6 @@
 
 @media (min-width:767px) {
     .kboClubWrap {
-        padding: 5rem clamp(10rem, 5vw, 15rem);
 
         section {
             .clubWrap {
@@ -61,7 +64,7 @@
                 >div {
                     transition: .1s;
                     &:hover{
-                        background-color: #ccc;
+                        background-color: #ddd;
                     }
                     .favorite {
                         font-size: 1rem;
@@ -72,9 +75,18 @@
     }
 }
 
+@media (min-width:1024px) {
+    .kboClubWrap{
+        section{
+            padding: 0 1rem;
+        }
+    }
+}
+
 @media (min-width:1200px) {
     .kboClubWrap {
         section {
+            padding: 0 10rem;
             .clubWrap {
                 grid-template-columns: repeat(4, 1fr);
             }

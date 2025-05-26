@@ -77,7 +77,7 @@
             padding: 1rem;
 
             h3 {
-                font-size: .8rem;
+                font-size: .6rem;
                 line-height: 16px;
             }
         }
@@ -132,6 +132,11 @@
 @media (min-width:767px) {
     .ticketingWrap{
         .wrapper{
+            .linkWrap{
+                h3{
+                    font-size: .8rem;
+                }
+            }
             .left{
                 transition: .3s;
                 &:hover{
