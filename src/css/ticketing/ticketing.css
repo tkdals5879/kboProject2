@@ -25,7 +25,7 @@
   position: absolute;
   right: 1rem;
   bottom: 1rem;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   z-index: 99;
 }
 .ticketingWrap .wrapper .left {
@@ -67,7 +67,7 @@
   height: 100%;
   position: relative;
   background-color: #ccc;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 .ticketingWrap .wrapper .linkWrap h3 {
   font-size: 0.6rem;
@@ -95,6 +95,9 @@
 }
 
 @media (min-width: 767px) {
+  .ticketingWrap .wrapper .linkWrap {
+    padding: 1rem;
+  }
   .ticketingWrap .wrapper .linkWrap h3 {
     font-size: 0.8rem;
   }
@@ -125,6 +128,17 @@
   .ticketingWrap .wrapper .right .rightBottom .lotteWrap:hover {
     transform: translate(2px, 2px);
     box-shadow: -3px -3px 10px #333;
+  }
+  .ticketingWrap .wrapper a .noneMob {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    font-size: 0.8rem;
+    z-index: 99;
+  }
+  .ticketingWrap .wrapper a .mob {
+    display: none;
   }
 }
 @media (min-width: 1200px) {

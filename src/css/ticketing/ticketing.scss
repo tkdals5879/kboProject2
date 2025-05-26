@@ -16,16 +16,18 @@
         display: flex;
         gap: .5rem;
 
-        a{
+        a {
             position: relative;
-            .noneMob{
-               display: none;
+
+            .noneMob {
+                display: none;
             }
-            .mob{
+
+            .mob {
                 position: absolute;
                 right: 1rem;
                 bottom: 1rem;
-                font-size: .7rem;
+                font-size: .6rem;
                 z-index: 99;
             }
         }
@@ -57,14 +59,16 @@
                 height: 60%;
                 display: flex;
                 gap: .5rem;
-                .ncWrap{
+
+                .ncWrap {
                     width: 100%;
                     border-radius: 10px;
                     overflow: hidden;
                 }
-                .lotteWrap{
+
+                .lotteWrap {
                     width: 100%;
-                    border-radius: 10px;  
+                    border-radius: 10px;
                     overflow: hidden;
                 }
             }
@@ -74,7 +78,7 @@
             height: 100%;
             position: relative;
             background-color: #ccc;
-            padding: 1rem;
+            padding: .5rem;
 
             h3 {
                 font-size: .6rem;
@@ -130,43 +134,68 @@
 
 
 @media (min-width:767px) {
-    .ticketingWrap{
-        .wrapper{
-            .linkWrap{
-                h3{
+    .ticketingWrap {
+        .wrapper {
+            .linkWrap {
+                padding: 1rem;
+
+                h3 {
                     font-size: .8rem;
                 }
             }
-            .left{
+
+            .left {
                 transition: .3s;
-                &:hover{
-                    transform: translate(-2px,-2px);
+
+                &:hover {
+                    transform: translate(-2px, -2px);
                     box-shadow: 3px 3px 10px #333;
                 }
             }
-            .right{
-                .rightTop{
+
+            .right {
+                .rightTop {
                     transition: .3s;
-                    &:hover{
-                        transform: translate(0px,-2px);
+
+                    &:hover {
+                        transform: translate(0px, -2px);
                         box-shadow: 0px 3px 10px #333;
                     }
                 }
-                .rightBottom{
-                    .ncWrap{
+
+                .rightBottom {
+                    .ncWrap {
                         transition: .3s;
-                        &:hover{
-                            transform: translate(0px,2px);
+
+                        &:hover {
+                            transform: translate(0px, 2px);
                             box-shadow: 0px -3px 10px #333;
-                        } 
+                        }
                     }
-                    .lotteWrap{
+
+                    .lotteWrap {
                         transition: .3s;
-                    &:hover{
-                        transform: translate(2px,2px);
-                        box-shadow: -3px -3px 10px #333;
+
+                        &:hover {
+                            transform: translate(2px, 2px);
+                            box-shadow: -3px -3px 10px #333;
+                        }
                     }
-                    }
+                }
+            }
+
+            a {
+                .noneMob {
+                    display: block;
+                    position: absolute;
+                    right: 1rem;
+                    bottom: 1rem;
+                    font-size: .8rem;
+                    z-index: 99;
+                }
+
+                .mob {
+                    display: none;
                 }
             }
         }
