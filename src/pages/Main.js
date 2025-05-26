@@ -27,7 +27,7 @@ function Main() {
       });
   }, []);
 
-  // useEffect(() => { console.log("rankings > ", rankings) }, [rankings])
+  useEffect(() => { console.log("rankings > ", rankings) }, [rankings])
 
   return (
     <div className="mainWrap">
