@@ -75,7 +75,7 @@ function Layout() {
         </ul>
 
         <div className='hamNav'>
-          <div className='ham' onClick={handleMenuToggle}>
+          <div className={`ham ${isMenuOpen ? 'open' : ''}`} onClick={handleMenuToggle}>
             <span></span>
             <span></span>
             <span></span>
