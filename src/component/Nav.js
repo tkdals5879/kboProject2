@@ -13,9 +13,10 @@ function Nav({ handleMenuClose }) {
 
   return (
       <motion.div className='navWrap'
-        initial={{ x: '-50%', opacity: 0 }}
-        animate={{ x: 0, opacity: 1, transition: { duration: .7, type: 'spring', ease:'ease-out'} }}
-        exit={{ x: 0, opacity: 0, transition: { duration: .3 } }}
+        initial={{opacity: 0 }}
+        animate={{opacity: 1 }}
+        exit={{opacity: 0 }}
+        transition={{duration: .3}}
       >
         <ul>
           <li onClick={handleMenuClose}><Link to={'/kboClub'} onClick={scrollToTop}>구단정보</Link></li>

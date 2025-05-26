@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate, Outlet, Link } from 'react-router-dom';
@@ -49,6 +49,18 @@ function Layout() {
   const handleMenuClose = () => {
     setIsMenuOpen(false)
   }
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto'
+    }
+  }, [isMenuOpen])
 
   return (
     <div className='layoutWrap'>
