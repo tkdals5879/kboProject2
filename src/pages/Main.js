@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';ㅞ
 import axios from 'axios';
 import TeamRankTable from '../component/TeamRankTable';
 
