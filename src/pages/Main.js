@@ -32,7 +32,6 @@ function Main() {
         const rawGames = res.data.games || [];
 
         setEvents(rawGames);
-        console.log(events)
 
         const todayStr = new Date().toISOString().slice(0, 10);
 
@@ -45,7 +44,7 @@ function Main() {
       .catch(err => {
         console.error("일정 데이터를 불러오는데 실패했습니다:", err);
       });
-  }, []);
+  }, [events]);
 
   useEffect(() => { console.log("events", todayGames) }, [todayGames])
 
