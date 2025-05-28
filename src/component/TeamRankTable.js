@@ -8,7 +8,7 @@ function TeamRankTable({favTeam}) {
     const [rankings, setRankings] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/ranking')
+        axios.get(' http://localhost:8000/api/ranking')
             .then(response => {
                 setRankings(response.data);
             })

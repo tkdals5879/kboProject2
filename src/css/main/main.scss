@@ -1,74 +1,100 @@
 .mainWrap {
     max-width: 100%;
     height: 100%;
-    padding: 5rem 1rem 15rem 1rem;
+    padding: 5rem 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
 
-    .resultBoxWrap {
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-        margin-bottom: 5rem;
-
-        h2 {
-            font-size: 1.5rem;
-        }
-
-        .resultBoxes {
-            display: grid;
-            grid-template-columns: 1fr;
-            row-gap: 2rem;
-
-            .resultBox {
-                width: 100%;
-                padding: 2rem .5rem;
-                background-color: salmon;
-            }
-        }
+    .videoBg {
+        display: none;
     }
 
-    .mainResultWrap {
-        
-        h2 {
-            margin-bottom: .5rem;
-            font-size: 1.5rem;
-        }
+    >div {
+        background-color: #fff;
 
-        .resultTable {
+        .todayGamesWrap {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-bottom: 10rem;
 
-            table {
-                border: none;
-                border-radius: 10px;
-                overflow: hidden;
+            h2 {
+                font-size: 1.5rem;
+            }
 
-                thead {
-                    font-size: .5rem;
-                    background-color: #ccc;
+            .todayGames {
+                display: flex;
+                gap: 1rem;
 
-                    tr {
-                        th {
-                            padding: .5rem 0;
-                            border: none;
+                .gameBox {
+                    width: 100%;
+                    padding: 2.5rem 1rem 1rem 1rem;
+                    border: 2px solid #efefef;
+                    border-radius: 20px;
+                    box-shadow: 2px 2px 5px #eee;
+                    display: flex;
+                    flex-direction: column;
+                    .teamLogos{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-evenly;
+                        margin-bottom: 1rem;
+                        >img{
+                            width: 100%;
+                            max-width: 75px;
                         }
                     }
+                    p{
+                        font-size: .8rem;
+                        text-align: center;
+                        line-height: 20px;
+                    }
                 }
+            }
+        }
 
-                tbody {
+        .mainResultWrap {
+
+            h2 {
+                margin-bottom: 1rem;
+                font-size: 1.5rem;
+            }
+
+            .resultTable {
+
+                table {
                     border: none;
-                    font-size: .6rem;
+                    border-radius: 10px;
+                    overflow: hidden;
 
-                    tr {
-                        td {
-                            padding: 1rem .2rem;
-                            border: none;
-                            text-align: center;
+                    thead {
+                        font-size: .5rem;
+                        background-color: #ccc;
+
+                        tr {
+                            th {
+                                padding: .5rem 0;
+                                border: none;
+                            }
                         }
+                    }
 
-                        &:nth-child(2n) {
-                            background-color: #eee;
+                    tbody {
+                        border: none;
+                        font-size: .6rem;
+
+                        tr {
+                            td {
+                                padding: 1rem .2rem;
+                                border: none;
+                                text-align: center;
+                            }
+
+                            &:nth-child(2n) {
+                                background-color: #eee;
+                            }
                         }
                     }
                 }
@@ -79,7 +105,7 @@
     .notice {
         position: absolute;
         width: 100%;
-        bottom: 5rem;
+        top: 90vh;
         left: 50%;
         transform: translateX(-50%);
         color: #ccc;
@@ -118,29 +144,68 @@
     }
 }
 
-@media (min-width:1200px) {
+@media (min-width:1024px) {
     .mainWrap {
-        padding: 5rem 15rem 12rem 15rem;
+        padding: 0;
+        padding-top: 100vh;
 
-        .resultBoxWrap {
-            .notice {
-                bottom: 1rem;
+
+        .videoBg {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            overflow: hidden;
+
+            iframe {
+                width: 100%;
+                height: 100vh;
+                position: absolute;
+                top: 0;
+                left: 0;
             }
         }
 
-        .mainResultWrap {
+        >div {
+            padding: 5rem;
+            .todayGamesWrap{
+                margin-bottom: 10rem;
+                gap: 2rem;
+            }
+            .mainResultWrap{
+                h2{
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+}
 
-            .resultTable {
-                table {
+@media (min-width:1200px) {
+    .mainWrap {
+        // padding: 5rem 15rem 12rem 15rem;
 
-                    thead {
-                        th {
-                            padding: 1.2rem;
+        >div {
+            .mainResultWrap {
+
+                .resultTable {
+                    table {
+
+                        thead {
+                            font-size: 1rem;
+                            letter-spacing: 1px;
+
+                            th {
+                                padding: 1.2rem;
+                            }
                         }
-                    }
 
-                    tbody {
-                        font-size: 1rem;
+                        tbody {
+                            font-size: .9rem;
+                        }
                     }
                 }
             }

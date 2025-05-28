@@ -33,7 +33,7 @@ function Myteam() {
 
   ////////// 선수단 정보 받아오는 api //////////
   useEffect(() => {
-    axios.get(`http://localhost:8000/api/players?team=${team}`)
+    axios.get(` http://localhost:8000/api/players?team=${team}`)
       .then((res) => {
         setPlayers(res.data);
         // console.log(res.data)
@@ -56,7 +56,7 @@ function Myteam() {
   const [rankings, setRankings] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/ranking')
+    axios.get(' http://localhost:8000/api/ranking')
       .then(response => {
         setRankings(response.data);
       })

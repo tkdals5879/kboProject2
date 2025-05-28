@@ -15,19 +15,6 @@ function Layout() {
   const favTeam = teams.find(team => team.isFavorite === true)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  const teamColor = {
-    KIA: '#EA0029',
-    SAMSUNG: '#0065B2',
-    LG: '#C30452',
-    DOOSAN: '#1A1748',
-    KT: '#ED1A23',
-    SSG: '#CE0E2D',
-    LOTTE: '#041E42',
-    HANHWA: '#FC4E00',
-    NC: '#C79F79',
-    KIWOOM: '#570514',
-  }
-
   const navigate = useNavigate();
 
   const gotoHome = () => {
@@ -65,7 +52,7 @@ function Layout() {
   return (
     <div className='layoutWrap'>
       <header className='fixedHeader'>
-        <h1 onClick={gotoHome} style={{ color: teamColor[favTeam?.name] || '#000' }} > KBO Project</h1>
+        <h1 onClick={gotoHome} > KBO Project</h1>
         <ul className={`topNavWrap ${favTeam ? `team_${favTeam?.name}` : ''}`}>
           <li><Link to={'/kboClub'} onClick={scrollToTop}>구단정보</Link></li>
           <li><Link to={'/stadium'} onClick={scrollToTop}>구장정보</Link></li>

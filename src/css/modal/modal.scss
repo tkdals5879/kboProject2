@@ -6,31 +6,6 @@
     background-repeat: no-repeat;
 }
 
-@mixin teamName {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transform-origin: top left;
-    animation: disappear 1s forwards;
-    animation-delay: .5s;
-
-    @keyframes disappear {
-        0% {
-            transform: translate(-50%, -50%);
-            scale: 1;
-            opacity: 1;
-        }
-
-        100% {
-            transform: translate(-50%, -50%);
-            scale: 1.4;
-            opacity: 0;
-            display: none
-        }
-    }
-}
-
 ////////////////////////////////////////////////////////////////////
 
 .modalBg {
@@ -55,15 +30,6 @@
         background-color: #F5F5F7;
         color: #1D1D1F;
         border-radius: 10px;
-        opacity: 0;
-        animation: fadeIn .5s forwards;
-        animation-delay: 1.5s;
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
 
         .head {
             display: flex;
@@ -136,67 +102,6 @@
                 }
             }
         }
-    }
-
-    .KIA {
-        background-image: url(../../../public/modalKia.svg);
-        @include mob_backgroundSet();
-        @include teamName();
-
-    }
-
-    .SAMSUNG {
-        background-image: url(../../../public/modalSamsung.svg);
-        @include mob_backgroundSet();
-        @include teamName();
-    }
-
-    .LG {
-        background-image: url(../../../public/modalLg.svg);
-        @include mob_backgroundSet();
-        @include teamName();
-    }
-
-    .DOOSAN {
-        background-image: url(../../../public/modalDoosan.svg);
-        @include mob_backgroundSet();
-        @include teamName();
-    }
-
-    .KT {
-        background-image: url(../../../public/ktLogo.svg);
-        @include mob_backgroundSet();
-        @include teamName();
-    }
-
-    .SSG {
-        background-image: url(../../../public/modalSsg.svg);
-        @include mob_backgroundSet();
-        @include teamName();
-    }
-
-    .LOTTE {
-        background-image: url(../../../public/lotteLogo.svg);
-        @include mob_backgroundSet();
-        @include teamName();
-    }
-
-    .HANHWA {
-        background-image: url(../../../public/hanhwaLogo.svg);
-        @include mob_backgroundSet();
-        @include teamName();
-    }
-
-    .NC {
-        background-image: url(../../../public/modalNc.webp);
-        @include mob_backgroundSet();
-        @include teamName();
-    }
-
-    .KIWOOM {
-        background-image: url(../../../public/kiwoomLogo.svg);
-        @include mob_backgroundSet();
-        @include teamName();
     }
 }
 

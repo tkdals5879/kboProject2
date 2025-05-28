@@ -19,7 +19,7 @@ function StadiumDetail() {
     const [rankings, setRankings] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/ranking')
+        axios.get(' http://localhost:8000/api/ranking')
             .then(response => {
                 setRankings(response.data);
             })
@@ -102,7 +102,7 @@ function StadiumDetail() {
             </div>
 
             {modalOpen && (
-                <Modal clickedTeam={clickedTeam} handleModalClose={handleModalClose}  teamId={teamId}/>
+                <Modal clickedTeam={clickedTeam} handleModalClose={handleModalClose}/>
             )}
 
         </div>

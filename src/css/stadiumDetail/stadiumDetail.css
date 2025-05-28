@@ -153,9 +153,6 @@
   .stadiumDetailWrap .information .homeTeamInfo > div:not(:first-child) .homeTeamInfoRight p {
     font-size: 1rem;
   }
-  .stadiumDetailWrap .information .homeTeamInfo > div:not(:first-child) .homeTeamInfoRight span {
-    margin-top: 2rem;
-  }
   .stadiumDetailWrap .location {
     margin-top: 5rem;
     padding: 0;

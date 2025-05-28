@@ -25,11 +25,10 @@
             overflow: hidden;
 
             .infoBox {
-                width: 60%;
+                width: 70%;
                 height: 100%;
                 margin-left: auto;
-                backdrop-filter: blur(5px);
-                background-color: rgba(0,0,0,0.2);
+                background-color: rgba(0,0,0,0.3);
                 mask-image: linear-gradient(to right, transparent 0%, black 30%);
                 padding: .5rem; 
                 display: flex;
@@ -55,17 +54,17 @@
 
         .lg,
         .doosan {
-            background-image: url(../../../public/lg-doosan-stadium.jpg);
+            background-image: url(../../../public/lg-doosan-stadium.webp);
             @include backgroundSet();
         }
 
         .samsung {
-            background-image: url(../../../public/samsung-stadium.jpg);
+            background-image: url(../../../public/samsung-stadium.webp);
             @include backgroundSet();
         }
 
         .kia {
-            background-image: url(../../../public/kia-stadium.jpg);
+            background-image: url(../../../public/kia-stadium.webp);
             @include backgroundSet();
         }
 
@@ -75,27 +74,27 @@
         }
 
         .ssg {
-            background-image: url(../../../public/ssg-stadium.jpg);
+            background-image: url(../../../public/ssg-stadium.webp);
             @include backgroundSet();
         }
 
         .lotte {
-            background-image: url(../../../public/lotte-stadium.jpeg);
+            background-image: url(../../../public/lotte-stadium.webp);
             @include backgroundSet();
         }
 
         .kiwoom {
-            background-image: url(../../../public/kiwoom-stadium.jpg);
+            background-image: url(../../../public/kiwoom-stadium.webp);
             @include backgroundSet();
         }
 
         .hanhwa {
-            background-image: url(../../../public/hanhwa-stadium.jpg);
+            background-image: url(../../../public/hanhwa-stadium.webp);
             @include backgroundSet();
         }
 
         .nc {
-            background-image: url(../../../public/nc-stadium.avif);
+            background-image: url(../../../public/nc-stadium.webp);
             @include backgroundSet();
         }
         .favorite{
@@ -127,8 +126,7 @@
 
             .infoBox{
                 width: 100%;
-                backdrop-filter: blur(2px);
-                background-color: rgba(0,0,0,0.3);
+                background-color: rgba(0,0,0,0.2);
                 align-items: start;
                 mask-image:none;
                 .stadiumInfo{

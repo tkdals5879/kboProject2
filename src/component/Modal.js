@@ -28,14 +28,14 @@ function Modal({ clickedTeam, handleModalClose }) {
     useEffect(() => {
         if (!modalProps) return;
 
-        axios.get(`http://localhost:8000/api/recent_matches/?team=${modalProps}`)
+        axios.get(` http://localhost:8000/api/recent_matches/?team=${modalProps}`)
             .then(response => {
                 setMatches(response.data.recent_matches)
             })
             .catch(error => console.error("순위 정보를 불러오는데 실패했습니다.", error))
     }, [modalProps])
 
-    // useEffect(() => { console.log(matches) }, [matches])
+    useEffect(() => { console.log(matches) }, [matches])
 
     const teamColor = {
         KIA : '#EA0029',
@@ -52,7 +52,7 @@ function Modal({ clickedTeam, handleModalClose }) {
 
     return (
         <div className='modalBg' onClick={handleBgClick}>
-            <div className={`${teamName}`}></div>
+            {/* <div className={`${teamName}`}></div> */}
             <div className='modalWrap'>
                 <div className='head'>
                     <h3>최근 10경기</h3>
