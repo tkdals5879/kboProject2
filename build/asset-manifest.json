@@ -1,29 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.4a41b687.css",
-    "main.js": "/static/js/main.11b7f4fb.js",
+    "main.css": "/static/css/main.bfc2123d.css",
+    "main.js": "/static/js/main.122852b0.js",
     "static/js/453.e32f18cc.chunk.js": "/static/js/453.e32f18cc.chunk.js",
-    "static/media/samsung-stadium.jpg": "/static/media/samsung-stadium.70d885133f5261021b9e.jpg",
-    "static/media/ssg-stadium.jpg": "/static/media/ssg-stadium.436958ced59b5f11fa46.jpg",
-    "static/media/lotte-stadium.jpeg": "/static/media/lotte-stadium.d394efe049002392a258.jpeg",
     "static/media/kt-stadium.webp": "/static/media/kt-stadium.0e28f65cb17f38c50442.webp",
-    "static/media/kia-stadium.jpg": "/static/media/kia-stadium.0814731eb7b9f8ed8931.jpg",
-    "static/media/lg-doosan-stadium.jpg": "/static/media/lg-doosan-stadium.d41afdd879fd6b78ed16.jpg",
+    "static/media/samsung-stadium.webp": "/static/media/samsung-stadium.df0c554fecf7eafc3217.webp",
+    "static/media/ssg-stadium.webp": "/static/media/ssg-stadium.32e8605f72281b495a07.webp",
     "static/media/KBO Dia Gothic_bold.ttf": "/static/media/KBO Dia Gothic_bold.013c304ec52950f022e5.ttf",
-    "static/media/kiwoom-stadium.jpg": "/static/media/kiwoom-stadium.bdc8524bad8b46d3e019.jpg",
-    "static/media/ncTicketSite.png": "/static/media/ncTicketSite.24d78cb69de1bf98b0b7.png",
-    "static/media/nc-stadium.avif": "/static/media/nc-stadium.0d0e4207d58b191a7a04.avif",
-    "static/media/hanhwa-stadium.jpg": "/static/media/hanhwa-stadium.48b6c54efc6b2626be4e.jpg",
-    "static/media/ticketlinkSite.png": "/static/media/ticketlinkSite.2674d9648f17b272ed52.png",
-    "static/media/interparkTicketSite.png": "/static/media/interparkTicketSite.fe72fdd925f6170a7a88.png",
-    "static/media/lotteTicketSite.gif": "/static/media/lotteTicketSite.cdb97e2fcce92411c20d.gif",
+    "static/media/KBO Dia Gothic_medium.ttf": "/static/media/KBO Dia Gothic_medium.86277cf8b7effb3dd1b1.ttf",
+    "static/media/KBO Dia Gothic_light.ttf": "/static/media/KBO Dia Gothic_light.9d3561f0c5d9a61ef1df.ttf",
+    "static/media/kia-stadium.webp": "/static/media/kia-stadium.5f8963e176fbd462d3f1.webp",
+    "static/media/lotte-stadium.webp": "/static/media/lotte-stadium.88361308ca8066e3426b.webp",
+    "static/media/nc-stadium.webp": "/static/media/nc-stadium.15e2a6ea5e237f27bf40.webp",
+    "static/media/kiwoom-stadium.webp": "/static/media/kiwoom-stadium.9d9cea84e48f10c482d5.webp",
+    "static/media/lg-doosan-stadium.webp": "/static/media/lg-doosan-stadium.48001037eea82e8d9758.webp",
+    "static/media/hanhwa-stadium.webp": "/static/media/hanhwa-stadium.2d8abccba9fda39ee49a.webp",
     "index.html": "/index.html",
-    "main.4a41b687.css.map": "/static/css/main.4a41b687.css.map",
-    "main.11b7f4fb.js.map": "/static/js/main.11b7f4fb.js.map",
+    "main.bfc2123d.css.map": "/static/css/main.bfc2123d.css.map",
+    "main.122852b0.js.map": "/static/js/main.122852b0.js.map",
     "453.e32f18cc.chunk.js.map": "/static/js/453.e32f18cc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4a41b687.css",
-    "static/js/main.11b7f4fb.js"
+    "static/css/main.bfc2123d.css",
+    "static/js/main.122852b0.js"
   ]
 }

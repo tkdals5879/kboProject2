@@ -84,7 +84,7 @@ function Main() {
 
           <div className='todayGames'>
             {todayGames.map((game, idx) => {
-              const [teamA, teamB] = game.title.split(' vs '); // 'LG vs 두산' → ['LG', '두산']
+              const [teamA, teamB] = game.title.split(' vs ');
 
               const teamAData = teams.find(team => team.modalProps === teamA);
               const teamBData = teams.find(team => team.modalProps === teamB);
