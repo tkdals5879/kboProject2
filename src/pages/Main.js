@@ -9,8 +9,8 @@ function Main() {
   const [rankings, setRankings] = useState([]);
   // const [results, setResults] = useState([]);
   const teams = useSelector(state => state?.teams?.teams)
-  const teamName = teams.map(team => team?.modalProps)
-  const teamLogo = teams.map(team => team?.logo)
+  // const teamName = teams.map(team => team?.modalProps)
+  // const teamLogo = teams.map(team => team?.logo)
 
   // useEffect(() => {
   //   axios.get(' http://localhost:8000/api/result')
@@ -32,6 +32,7 @@ function Main() {
         const rawGames = res.data.games || [];
 
         setEvents(rawGames);
+        console.log(events)
 
         const todayStr = new Date().toISOString().slice(0, 10);
 
