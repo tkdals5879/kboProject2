@@ -25,15 +25,19 @@
 .mainWrap > div .todayGamesWrap .todayGames {
   display: flex;
   gap: 1rem;
+  width: 100%;
+  padding: 1rem 0;
 }
 .mainWrap > div .todayGamesWrap .todayGames .gameBox {
   width: 100%;
-  padding: 2.5rem 1rem 1rem 1rem;
+  height: 100%;
+  padding: 2rem 1rem;
   border: 2px solid #efefef;
   border-radius: 20px;
   box-shadow: 2px 2px 5px #eee;
   display: flex;
   flex-direction: column;
+  transition: 0.3s;
 }
 .mainWrap > div .todayGamesWrap .todayGames .gameBox .teamLogos {
   display: flex;
@@ -44,11 +48,31 @@
 .mainWrap > div .todayGamesWrap .todayGames .gameBox .teamLogos > img {
   width: 100%;
   max-width: 75px;
+  height: 75px;
+}
+.mainWrap > div .todayGamesWrap .todayGames .gameBox .teamLogos > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+.mainWrap > div .todayGamesWrap .todayGames .gameBox .teamName {
+  display: flex;
+  justify-content: space-around;
+  gap: 5rem;
 }
 .mainWrap > div .todayGamesWrap .todayGames .gameBox p {
   font-size: 0.8rem;
   text-align: center;
   line-height: 20px;
+}
+.mainWrap > div .todayGamesWrap .todayGames .gameBox .gameTime {
+  width: fit-content;
+  margin: 0 auto;
+  background-color: #efefef;
+  padding: 0.2rem 1em;
+  border-radius: 10px;
 }
 .mainWrap > div .mainResultWrap h2 {
   margin-bottom: 1rem;
@@ -122,6 +146,8 @@
     position: absolute;
     top: 0;
     left: 0;
+    scale: 1.5;
+    padding-top: 2rem;
   }
   .mainWrap > div {
     padding: 5rem;
@@ -129,6 +155,10 @@
   .mainWrap > div .todayGamesWrap {
     margin-bottom: 10rem;
     gap: 2rem;
+  }
+  .mainWrap > div .todayGamesWrap .gameBox:hover {
+    transform: translate(0px, -5px);
+    box-shadow: 0px 5px 5px #ccc;
   }
   .mainWrap > div .mainResultWrap h2 {
     margin-bottom: 2rem;
