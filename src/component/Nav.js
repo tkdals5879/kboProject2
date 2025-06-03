@@ -20,9 +20,8 @@ function Nav({ handleMenuClose }) {
       >
         <ul>
           <li onClick={handleMenuClose}><Link to={'/kboClub'} onClick={scrollToTop}>구단정보</Link></li>
-          <li onClick={handleMenuClose}><Link to={'/stadium'} onClick={scrollToTop}>구장정보</Link></li>
-          <li onClick={handleMenuClose}><Link to={'/myteam'} onClick={scrollToTop}>나의구단</Link></li>
           <li onClick={handleMenuClose}><Link to={'/schedule'} onClick={scrollToTop}>경기일정</Link></li>
+          <li onClick={handleMenuClose}><Link to={'/myteam'} onClick={scrollToTop}>나의구단</Link></li>
           <li onClick={handleMenuClose}><Link to={'/ticketing'} onClick={scrollToTop}>예매하기</Link></li>
         </ul>
       </motion.div>

@@ -87,6 +87,9 @@
             }
 
             .resultTable {
+                background-color: #333;
+                padding: 1rem;
+                border-radius: 20px;
 
                 table {
                     border: none;
@@ -95,7 +98,7 @@
 
                     thead {
                         font-size: .5rem;
-                        background-color: #ccc;
+                        // background-color: #ccc;
 
                         tr {
                             th {
@@ -116,9 +119,9 @@
                                 text-align: center;
                             }
 
-                            &:nth-child(2n) {
-                                background-color: #eee;
-                            }
+                            // &:nth-child(2n) {
+                            //     background-color: #eee;
+                            // }
                         }
                     }
                 }
@@ -172,6 +175,11 @@
     .mainWrap {
         padding: 0;
         padding-top: 100vh;
+        >div{
+            &:last-child{
+                border-radius: 100px 100px 0 0;
+            }
+        }
 
 
         .videoBg {

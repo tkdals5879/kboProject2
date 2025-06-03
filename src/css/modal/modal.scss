@@ -111,34 +111,132 @@
 
 
 @media (min-width:767px) {
-    .modalBg{
-        .modalWrap{
+    .modalBg {
+        .modalWrap {
             max-width: 600px;
-            .tableHead{
+
+            .tableHead {
                 p {
                     &:not(:last-child) {
                         margin-right: 6.7rem;
                     }
                 }
             }
-            .matchWrap{
-                .matchBox{
+
+            .matchWrap {
+                .matchBox {
                     height: 25px;
 
-                    .date{
+                    .date {
                         font-size: .7rem;
                     }
-                    .vs{
+
+                    .vs {
                         left: 8.5rem;
                     }
-                    .result{
+
+                    .result {
                         left: 16.5rem;
                     }
-                    .runS{
+
+                    .runS {
                         right: 9.4rem;
                     }
-                    &:hover{
-                        background-color: #eee;
+
+                    &:hover {
+                        background-color: rgba($color: #000, $alpha: 0.1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:1024px) {
+    .modalBg {
+        width: fit-content;
+        position: unset;
+        z-index: inherit;
+        background-color: transparent;
+        backdrop-filter: blur(0);
+
+        .modalWrap {
+            width: fit-content;
+            padding: 0;
+            position: relative;
+            top: auto;
+            left: auto;
+            transform: none;
+            background-color: transparent;
+            border-radius: 0;
+
+            .head {
+                button {
+                    display: none;
+                }
+            }
+
+            .tableHead {
+                p {
+                    min-width: 32px;
+                    &:not(:last-child) {
+                        margin-right: 6rem;
+                    }
+                }
+            }
+
+            .matchWrap {
+
+                .matchBox {
+                    .vs {
+                        left: 7.8rem;
+                    }
+
+                    .result {
+                        left: 16.1rem;
+                    }
+
+                    .runS {
+                        right: 8.7rem;
+                    }
+
+                    .rusA{
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:1600px) {
+    .modalBg{
+        .modalWrap{
+            min-width: 900px;
+            .tableHead{
+                display: flex;
+                justify-content: space-evenly;
+            }
+            .matchWrap{
+                .matchBox{
+                    p{
+                        font-size: 1rem;
+                    }
+                    .date{
+                        left: 2rem;
+                        font-size: .8rem;
+                    }
+                    .vs{
+                        left: 15.2rem;
+                    }
+                    .result{
+                        left: 27rem;
+                    }
+                    .runS{
+                        right: 16.3rem;
+                    }
+                    .runA{
+                        right: 4.5rem;
                     }
                 }
             }

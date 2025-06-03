@@ -15,6 +15,7 @@ function StadiumDetail() {
     const { teamId } = useParams();
     const teams = useSelector((state) => state.teams.teams)
     const clickedTeam = teams.find(team => team.id === teamId)
+    console.log(clickedTeam)
 
     const [rankings, setRankings] = useState([]);
 
@@ -47,11 +48,32 @@ function StadiumDetail() {
     }
 
     useEffect(() => {
+        const handleResize = () => {
+            const width = window.innerWidth;
+
+            setModalOpen(prev => {
+                if (width >= 1024 && !prev) return true;
+                if (width < 1024 && prev) return false;
+                return prev;
+            });
+        };
+
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+
+    useEffect(() => {
         // console.log("모달 상태 > ", modalOpen);
-        if (modalOpen) {
-            document.body.style.overflow = "hidden";
-        } else {
-            document.body.style.overflow = "auto";
+        if (window.innerWidth < 768) {
+
+            if (modalOpen) {
+                document.body.style.overflow = "hidden";
+            } else {
+                document.body.style.overflow = "auto";
+            }
         }
         return () => {
             document.body.style.overflow = "auto";
@@ -64,46 +86,40 @@ function StadiumDetail() {
         <div className='stadiumDetailWrap'>
 
             <div className='information'>
-                <div className='text'>
-                    <h1>{clickedTeam.stadiumName}</h1>
-                    <p>{clickedTeam.stadiumOpen}</p>
-                </div>
 
                 <div>
                     <div className='stadiumPicture'>
                         <img src={clickedTeam.stadiumImg} alt={clickedTeam.stadiumName} />
                     </div>
                     <div className='homeTeamInfo'>
-                        <div className='homeTeamInfoTop'>
-                            <h2>홈 구단 정보</h2>
-                            <button className='favorite' onClick={() => favToogle(clickedTeam.id)}><FontAwesomeIcon icon={faStar} className={clickedTeam.isFavorite ? 'fav' : ''} /></button>
-                        </div>
+                        <h1>{clickedTeam.homeTeam}</h1>
                         <div>
                             <div className='homeTeamInfoLeft'>
                                 <img src={clickedTeam.logo} alt={clickedTeam.homeTeam} />
+                                <button className='favorite' onClick={() => favToogle(clickedTeam.id)}>
+                                    <FontAwesomeIcon icon={faStar} className={clickedTeam.isFavorite ? 'fav' : ''} />
+                                </button>
                             </div>
                             <div className='homeTeamInfoRight'>
-                                <h3>{clickedTeam.homeTeam}</h3>
+                                <p>홈 구단 : {clickedTeam.stadiumName} <span>&#40;{clickedTeam.stadiumOpen}&#41;</span></p>
                                 <p>순위 : {clickedTeamInfo?.순위}위</p>
                                 <p>전적 : {clickedTeamInfo?.경기}전 {clickedTeamInfo?.승}승 {clickedTeamInfo?.무}무 {clickedTeamInfo?.패}패</p>
                                 <p>승률 : {clickedTeamInfo?.승률}</p>
                                 <p>최근 10G: {clickedTeamInfo?.최근10경기}</p>
                                 <p>연속 : {clickedTeamInfo?.연속}</p>
+                                <p>게임 차 : {clickedTeamInfo?.게임차}</p>
                                 <span onClick={handleModalOpen}>더보기</span>
                             </div>
+                            {modalOpen && <Modal clickedTeam={clickedTeam} handleModalClose={handleModalClose} />}
                         </div>
                     </div>
                 </div>
             </div>
 
             <div className='location'>
-                <h2>위치</h2>
+                <h2>구장 위치</h2>
                 <iframe src={clickedTeam.iframeUrl} title={`${clickedTeam.stadiumName} 지도`}></iframe>
             </div>
-
-            {modalOpen && (
-                <Modal clickedTeam={clickedTeam} handleModalClose={handleModalClose}/>
-            )}
 
         </div>
     )

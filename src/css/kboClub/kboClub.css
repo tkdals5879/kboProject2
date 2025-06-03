@@ -4,7 +4,11 @@
 .kboClubWrap section {
   padding: 0 1rem 1rem 1rem;
 }
-.kboClubWrap section h2 {
+.kboClubWrap section > h2 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+.kboClubWrap section > h3 {
   margin-bottom: 2rem;
   font-size: 1.5rem;
 }
@@ -63,10 +67,16 @@
 }
 @media (min-width: 1200px) {
   .kboClubWrap section {
-    padding: 0 10rem;
+    padding: 1rem 5rem;
+    border-radius: 20px;
+  }
+  .kboClubWrap section h3 {
+    justify-self: center;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
   }
   .kboClubWrap section .clubWrap {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 

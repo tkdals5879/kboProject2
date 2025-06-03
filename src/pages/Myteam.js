@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import TeamRankTable from '../component/TeamRankTable';
 import axios from 'axios'
+import KboClub from '../pages/KboClub'
 
 import '../css/myTeam/myTeam.css'
 
@@ -36,7 +37,7 @@ function Myteam() {
     axios.get(` http://localhost:8000/api/players?team=${team}`)
       .then((res) => {
         setPlayers(res.data);
-        // console.log(res.data)
+        console.log(res.data)
       })
       .catch((err) => {
         console.error(err);
@@ -72,7 +73,7 @@ function Myteam() {
 
   return (
     <div className='myTeamWrap'>
-      <h2>나의 구단</h2>
+      <h3>나의 구단</h3>
       {favTeam ? (
         <>
 
@@ -92,13 +93,12 @@ function Myteam() {
                 <p>승률 : {myTeamInfo?.승률}</p>
                 <p>연속 : {myTeamInfo?.연속}</p>
                 <p>홈 경기전적: {myTeamInfo?.홈} <span>(승,무,패)</span></p>
-                <p>원정 경기전적 : {myTeamInfo?.원정} <span>(승,무,패)</span></p>
+                <p>원정 경기전적 : {myTeamInfo?.방문} <span>(승,무,패)</span></p>
                 <p>최근 10G : {myTeamInfo?.최근10경기}</p>
               </div>
 
               <div className='rankTable'>
-                <h2>2025 KBO 순위표</h2>
-                <TeamRankTable favTeam={favTeam}/>
+                <TeamRankTable favTeam={favTeam} />
               </div>
 
             </div>
@@ -106,7 +106,7 @@ function Myteam() {
           </div>
 
           <div className='playerListWrap'>
-            <h2>선수단 정보</h2>
+            <h3>선수단 정보</h3>
 
 
             <div className='btnWrap'>
@@ -147,8 +147,11 @@ function Myteam() {
                 <div key={idx} className='playerBox'>
                   <div className='img'></div>
                   <div className='playerInfo'>
-                    <h3>{player.player_name} <span>&#40; {player.birth_date} &#41;</span> </h3>
-                    <p>{player.position} | {player.pitch_bat} | {player.physical}</p>
+                    <h3>{player.player_number}</h3>
+                    <div>
+                      <p>{player.player_name} <span className='verticalBar'></span> {player.position} <span>&#40; {player?.birth_date.slice(0, 4)} &#41;</span></p>
+                      <p>{player.physical}</p>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -157,8 +160,11 @@ function Myteam() {
                 <div key={idx} className='playerBox'>
                   <div className='img'></div>
                   <div className='playerInfo'>
-                    <h3>{player.player_name} <span>&#40; {player.birth_date} &#41;</span></h3>
-                    <p>{player.position} | {player.pitch_bat} | {player.physical}</p>
+                    <h3>{player.player_number}</h3>
+                    <div>
+                      <p>{player.player_name} <span className='verticalBar'></span> {player.position} <span>&#40; {player?.birth_date.slice(0, 4)} &#41;</span></p>
+                      <p>{player.physical}</p>
+                    </div>
 
                   </div>
                 </div>
@@ -168,8 +174,11 @@ function Myteam() {
                 <div key={idx} className='playerBox'>
                   <div className='img'></div>
                   <div className='playerInfo'>
-                    <h3>{player.player_name} <span>&#40; {player.birth_date} &#41;</span></h3>
-                    <p>{player.position} | {player.pitch_bat} | {player.physical}</p>
+                    <h3>{player.player_number}</h3>
+                    <div>
+                      <p>{player.player_name} <span className='verticalBar'></span> {player.position} <span>&#40; {player?.birth_date.slice(0, 4)} &#41;</span></p>
+                      <p>{player.physical}</p>
+                    </div>
 
                   </div>
                 </div>
@@ -179,8 +188,11 @@ function Myteam() {
                 <div key={idx} className='playerBox'>
                   <div className='img'></div>
                   <div className='playerInfo'>
-                    <h3>{player.player_name} <span>&#40; {player.birth_date} &#41;</span></h3>
-                    <p>{player.position} | {player.pitch_bat} | {player.physical}</p>
+                    <h3>{player.player_number}</h3>
+                    <div>
+                      <p>{player.player_name} <span className='verticalBar'></span> {player.position} <span>&#40; {player?.birth_date.slice(0, 4)} &#41;</span></p>
+                      <p>{player.physical}</p>
+                    </div>
 
                   </div>
                 </div>
@@ -188,10 +200,14 @@ function Myteam() {
             </div>
           </div>
         </>
-      ) : (<p>즐겨찾기한 구단이 없습니다!</p>)}
+      ) : window.innerWidth >= 1024
+        ? <KboClub favTeam={favTeam} />
+        : <p className="noTeamMessage">응원할 구단을 선택해주세요.</p>}
 
     </div>
   )
 }
 
 export default Myteam;
+
+// (<p>즐겨찾기한 구단이 없습니다!</p>)

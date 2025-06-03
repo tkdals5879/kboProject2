@@ -1,7 +1,7 @@
 .myTeamWrap {
   padding: 5rem 1rem;
 }
-.myTeamWrap > h2 {
+.myTeamWrap > h3 {
   padding-bottom: 3rem;
   font-size: calc(1vw + 1rem);
 }
@@ -11,7 +11,7 @@
   gap: 1rem;
   padding: 1rem 0;
   border-bottom: 2px solid #efefef;
-  margin-bottom: 3rem;
+  margin-bottom: 7rem;
 }
 .myTeamWrap .myTeamDisplay .myTeamInfoA {
   padding: 1rem 0;
@@ -20,6 +20,7 @@
 }
 .myTeamWrap .myTeamDisplay .myTeamInfoA img {
   width: 70%;
+  max-width: 300px;
   margin: auto;
 }
 .myTeamWrap .myTeamDisplay .myTeamInfoA h3 {
@@ -47,8 +48,8 @@
 .myTeamWrap .myTeamDisplay .myTeamInfoB .rankTable {
   display: none;
 }
-.myTeamWrap .playerListWrap h2 {
-  font-size: 1rem;
+.myTeamWrap .playerListWrap h3 {
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 .myTeamWrap .playerListWrap .btnWrap {
@@ -71,15 +72,38 @@
 }
 .myTeamWrap .playerListWrap .playerList .playerBox {
   display: flex;
+  flex-direction: column;
   gap: 0.5rem;
+  align-items: center;
 }
 .myTeamWrap .playerListWrap .playerList .playerBox .img {
-  width: 150px;
+  width: 180px;
   height: 200px;
-  background-color: #ccc;
+  background-color: #efefef;
+}
+.myTeamWrap .playerListWrap .playerList .playerBox .playerInfo {
+  display: flex;
+  gap: 0.5rem;
+}
+.myTeamWrap .playerListWrap .playerList .playerBox .playerInfo > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.myTeamWrap .playerListWrap .playerList .playerBox .playerInfo > div p {
+  display: flex;
+  gap: 0.4rem;
+}
+.myTeamWrap .playerListWrap .playerList .playerBox .playerInfo > div p .verticalBar {
+  display: block;
+  width: 1.5px;
+  height: 10px;
+  align-self: center;
+  background-color: #000;
 }
 .myTeamWrap .playerListWrap .playerList .playerBox .playerInfo h3 {
-  font-size: 1rem;
+  font-size: 2rem;
+  color: #808080;
   margin-bottom: 1rem;
 }
 .myTeamWrap .playerListWrap .playerList .playerBox .playerInfo h3 span {
@@ -101,10 +125,13 @@
     max-width: 500px;
   }
   .myTeamWrap .playerListWrap .playerList {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (min-width: 1024px) {
+  .myTeamWrap {
+    padding: calc(120px + 1rem) 1rem;
+  }
   .myTeamWrap .myTeamDisplay {
     flex-direction: row;
     gap: 2rem;
@@ -125,7 +152,7 @@
     transition: 0.2s;
   }
   .myTeamWrap .myTeamDisplay .myTeamInfoA img {
-    width: 100%;
+    width: 75%;
     min-width: 250px;
     transition: 0.2s;
   }
@@ -182,11 +209,14 @@
   .myTeamWrap .myTeamDisplay .myTeamInfoB .rankTable .resultTable table .highlightTeam {
     background-color: goldenrod;
   }
+  .myTeamWrap .playerListWrap {
+    margin-top: 10rem;
+  }
+  .myTeamWrap .playerListWrap .playerList {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 @media (min-width: 1200px) {
-  .myTeamWrap {
-    padding: 5rem 1rem;
-  }
   .myTeamWrap .myTeamDisplay .myTeamInfoB > div p {
     font-size: 1.2rem;
   }
@@ -202,18 +232,15 @@
     font-size: 0.7rem;
   }
   .myTeamWrap .playerListWrap .playerList {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 @media (min-width: 1600px) {
-  .myTeamWrap {
-    padding: 5rem 1rem;
-  }
   .myTeamWrap .myTeamDisplay .myTeamInfoB .rankTable {
     min-width: 900px;
   }
   .myTeamWrap .playerListWrap .playerList {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 

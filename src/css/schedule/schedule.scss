@@ -5,7 +5,8 @@
         display: flex;
         justify-content: space-between;
 
-        h2 {
+        h3 {
+            font-size: calc(1vw + 1rem);
             margin-bottom: 5rem;
         }
 
@@ -107,7 +108,8 @@
                 position: absolute;
                 top: -2.5rem;
                 right: -.5rem;
-                background-color: transparent;
+                background-color: #fff;
+                border-radius: 100%;
                 border: none;
                 font-size: 2rem;
                 transition: .2s;
@@ -186,6 +188,7 @@
 
 @media (min-width:1024px) {
     .scheduleWrap {
+        padding: calc(120px + 1rem) 1rem;
         >div {
             .dotColorInfo {
                 display: none;

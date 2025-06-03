@@ -5,7 +5,8 @@
   display: flex;
   justify-content: space-between;
 }
-.scheduleWrap > div h2 {
+.scheduleWrap > div h3 {
+  font-size: calc(1vw + 1rem);
   margin-bottom: 5rem;
 }
 .scheduleWrap > div .dotColorInfo h4 {
@@ -91,7 +92,8 @@
   position: absolute;
   top: -2.5rem;
   right: -0.5rem;
-  background-color: transparent;
+  background-color: #fff;
+  border-radius: 100%;
   border: none;
   font-size: 2rem;
   transition: 0.2s;
@@ -129,6 +131,9 @@
   }
 }
 @media (min-width: 1024px) {
+  .scheduleWrap {
+    padding: calc(120px + 1rem) 1rem;
+  }
   .scheduleWrap > div .dotColorInfo {
     display: none;
   }

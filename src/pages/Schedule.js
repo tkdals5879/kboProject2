@@ -87,7 +87,7 @@ const Schedule = () => {
   return (
     <div style={{ maxWidth: '1500px', margin: 'auto' }} className='scheduleWrap'>
       <div>
-        <h2>경기 일정</h2>
+        <h3>경기 일정</h3>
         <div className='dotColorInfo'>
           <h4>시간대 별 색상안내</h4>
           <div>

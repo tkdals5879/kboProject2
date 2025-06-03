@@ -99,7 +99,75 @@
     right: 9.4rem;
   }
   .modalBg .modalWrap .matchWrap .matchBox:hover {
-    background-color: #eee;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+@media (min-width: 1024px) {
+  .modalBg {
+    width: fit-content;
+    position: unset;
+    z-index: inherit;
+    background-color: transparent;
+    backdrop-filter: blur(0);
+  }
+  .modalBg .modalWrap {
+    width: fit-content;
+    padding: 0;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    background-color: transparent;
+    border-radius: 0;
+  }
+  .modalBg .modalWrap .head button {
+    display: none;
+  }
+  .modalBg .modalWrap .tableHead p {
+    min-width: 32px;
+  }
+  .modalBg .modalWrap .tableHead p:not(:last-child) {
+    margin-right: 6rem;
+  }
+  .modalBg .modalWrap .matchWrap .matchBox .vs {
+    left: 7.8rem;
+  }
+  .modalBg .modalWrap .matchWrap .matchBox .result {
+    left: 16.1rem;
+  }
+  .modalBg .modalWrap .matchWrap .matchBox .runS {
+    right: 8.7rem;
+  }
+  .modalBg .modalWrap .matchWrap .matchBox .rusA {
+    right: 0;
+  }
+}
+@media (min-width: 1600px) {
+  .modalBg .modalWrap {
+    min-width: 900px;
+  }
+  .modalBg .modalWrap .tableHead {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .modalBg .modalWrap .matchWrap .matchBox p {
+    font-size: 1rem;
+  }
+  .modalBg .modalWrap .matchWrap .matchBox .date {
+    left: 2rem;
+    font-size: 0.8rem;
+  }
+  .modalBg .modalWrap .matchWrap .matchBox .vs {
+    left: 15.2rem;
+  }
+  .modalBg .modalWrap .matchWrap .matchBox .result {
+    left: 27rem;
+  }
+  .modalBg .modalWrap .matchWrap .matchBox .runS {
+    right: 16.3rem;
+  }
+  .modalBg .modalWrap .matchWrap .matchBox .runA {
+    right: 4.5rem;
   }
 }
 

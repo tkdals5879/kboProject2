@@ -3,70 +3,95 @@
 
     .fixedHeader {
         width: 100%;
-        height: 60px;
         position: fixed;
         top: 0;
         left: 0;
         display: flex;
-        padding: 0 1rem;
         background-color: #fff;
         backdrop-filter: blur(10px);
         color: #000;
         z-index: 999;
         box-shadow: 0px 0px 10px #000;
+        transition: .3s ease;
 
-        h1 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            cursor: pointer;
-            font-size: 1rem;
-            transition: .3s;
-        }
-
-        .topNavWrap {
+        .teamLogo {
             display: none;
-
-            li {
-                color: #000;
-            }
         }
 
-        .hamNav {
-            width: 30px;
-            height: 30px;
-            margin-right: auto;
-            align-self: center;
+        .gnb {
+            width: 100%;
+            height: 60px;
+            position: relative;
 
-            .ham {
+
+            h1 {
+                width: fit-content;
+                height: 100%;
+                align-content: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                cursor: pointer;
+                transition: .3s;
+
+                img {
+                    width: 7rem;
+                }
+            }
+
+            .topNavWrap {
+                display: none;
+
+                li {
+                    color: #000;
+                }
+            }
+
+            .hamNav {
                 width: 100%;
                 height: 100%;
+                align-self: center;
                 display: flex;
-                flex-direction: column;
-                gap: 4px;
-                justify-content: center;
+                justify-content: space-between;
 
-                span {
-                    display: block;
-                    width: 100%;
-                    height: 3px;
-                    background-color: #1D1D1F;
-                    transition: .2s;
+                .ham {
+                    width: 30px;
+                    height: 100%;
+                    margin-left: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                    justify-content: center;
+
+                    span {
+                        display: block;
+                        width: 100%;
+                        height: 3px;
+                        background-color: #1D1D1F;
+                        transition: .2s;
+                    }
+
+                    &.open {
+                        span:nth-child(1) {
+                            transform: translateY(8px) rotate(45deg);
+                        }
+
+                        span:nth-child(2) {
+                            opacity: 0;
+                        }
+
+                        span:nth-child(3) {
+                            transform: translateY(-7px) rotate(-45deg);
+                        }
+                    }
                 }
-
-                &.open {
-                    span:nth-child(1) {
-                        transform: translateY(8px) rotate(45deg);
-                    }
-
-                    span:nth-child(2) {
-                        opacity: 0;
-                    }
-
-                    span:nth-child(3) {
-                        transform: translateY(-7px) rotate(-45deg);
-                    }
+                .goToHome {
+                    font-size: 24px;
+                    color: #1D1D1F;
+                    background-color: transparent;
+                    border: none;
+                    margin-right: 1rem;
                 }
             }
 
@@ -108,14 +133,42 @@
         }
 
     }
-
-    .goToHome {
-        font-size: 24px;
-        color: #1D1D1F;
-        background-color: transparent;
-        border: none;
-        z-index: 999;
+    .show{
+        transform: translateY(0%);
     }
+    .hide{
+        transform: translateY(-100%);
+    }
+
+    .goTop{
+        position: fixed;
+        bottom: 5rem;
+        right: 1.9rem;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        text-align: center;
+        align-content: center;
+        opacity: 0;
+        box-shadow: 0px 0px 10px #000;
+        transition: .3s;
+        animation: spin 2s linear infinite;
+        @keyframes spin {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        &:hover{
+            scale: 1.2;
+        }
+    }
+    .visible{
+        opacity: 1;
+    }
+
 
 }
 
@@ -134,41 +187,89 @@
 @media (min-width:1024px) {
     .layoutWrap {
         .fixedHeader {
-            .topNavWrap {
-                position: absolute;
-                top: 50%;
-                right: 1rem;
-                transform: translateY(-50%);
+            flex-direction: column;
+            .teamLogo {
+                width: 100%;
+                height: 60px;
                 display: flex;
-                gap: .7vw;
-                color: #fff;
+                flex-direction: column;
+                .bar{
+                    display: block;
+                    width: calc(100% - 15rem);
+                    height: 1px;
+                    background-color: #000;
+                    margin-left: auto;
+                }
 
-                li {
+                ul {
+                    width: fit-content;
+                    height: 100%;
                     display: flex;
-                    gap: 12px;
+                    gap: 1.2rem;
+                    margin: auto;
 
-                    &:not(:first-child):before {
-                        display: block;
-                        content: '';
-                        width: 1px;
-                        height: 12px;
-                        margin-top: 4px;
-                        background-color: #000;
+                    li {
+                        width: 3rem;
+                        height: 100%;
+                        align-content: center;
+                        transition: .2s;
+                        cursor: pointer;
+
+                        &:hover {
+                            scale: 1.1;
+                        }
                     }
+                }
+            }
 
-                    &:hover {
-                        color: orange;
+            .gnb {
+
+                h1{
+                    top: -0.5rem;
+                    left: 6rem;
+                    img{
+                        width: 11rem;
+                    }
+                }
+                .goToHome {
+                    display: none;
+                }
+        
+                .hamNav {
+                    display: none;
+                }
+
+                .topNavWrap {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    display: flex;
+                    gap: 3vw;
+                    color: #fff;
+
+                    li {
+                        &:hover {
+                            color: orange;
+                        }
                     }
                 }
             }
         }
+    }
+}
 
-        .goToHome {
-            display: none;
-        }
-
-        .hamNav {
-            display: none;
+@media (min-width:1200px) {
+    .layoutWrap{
+        .fixedHeader{
+            .gnb{
+                h1{
+                    left: 7rem;
+                    img{
+                        width: 13rem;
+                    }
+                }
+            }
         }
     }
 }

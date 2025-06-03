@@ -52,7 +52,6 @@ function Modal({ clickedTeam, handleModalClose }) {
 
     return (
         <div className='modalBg' onClick={handleBgClick}>
-            {/* <div className={`${teamName}`}></div> */}
             <div className='modalWrap'>
                 <div className='head'>
                     <h3>최근 10경기</h3>

@@ -1,7 +1,7 @@
 .myTeamWrap {
     padding: 5rem 1rem;
 
-    >h2 {
+    >h3 {
         padding-bottom: 3rem;
         font-size: calc(1vw + 1rem);
     }
@@ -12,7 +12,7 @@
         gap: 1rem;
         padding: 1rem 0;
         border-bottom: 2px solid #efefef;
-        margin-bottom: 3rem;
+        margin-bottom: 7rem;
 
         .myTeamInfoA {
             padding: 1rem 0;
@@ -21,6 +21,7 @@
 
             img {
                 width: 70%;
+                max-width: 300px;
                 margin: auto;
             }
 
@@ -59,8 +60,8 @@
     }
 
     .playerListWrap {
-        h2 {
-            font-size: 1rem;
+        h3 {
+            font-size: 1.5rem;
             margin-bottom: 1rem;
         }
 
@@ -86,17 +87,42 @@
 
             .playerBox {
                 display: flex;
+                flex-direction: column;
                 gap: .5rem;
+                align-items: center;
 
                 .img {
-                    width: 150px;
+                    width: 180px;
                     height: 200px;
-                    background-color: #ccc;
+                    background-color: #efefef;
                 }
 
                 .playerInfo {
+                    display: flex;
+                    gap: .5rem;
+
+                    >div {
+                        display: flex;
+                        flex-direction: column;
+                        gap: .3rem;
+
+                        p {
+                            display: flex;
+                            gap: .4rem;
+
+                            .verticalBar {
+                                display: block;
+                                width: 1.5px;
+                                height: 10px;
+                                align-self: center;
+                                background-color: #000;
+                            }
+                        }
+                    }
+
                     h3 {
-                        font-size: 1rem;
+                        font-size: 2rem;
+                        color: #808080;
 
                         span {
                             font-size: .7rem;
@@ -145,7 +171,7 @@
 
         .playerListWrap {
             .playerList {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
             }
         }
     }
@@ -153,6 +179,8 @@
 
 @media (min-width:1024px) {
     .myTeamWrap {
+        padding: calc(120px + 1rem) 1rem;
+
         .myTeamDisplay {
             flex-direction: row;
             gap: 2rem;
@@ -174,7 +202,7 @@
                 }
 
                 img {
-                    width: 100%;
+                    width: 75%;
                     min-width: 250px;
                     transition: .2s;
                 }
@@ -235,7 +263,7 @@
                                 border-bottom: 2px solid #ddd;
                             }
 
-                            td{
+                            td {
                                 padding: .6rem .3rem;
                             }
 
@@ -255,12 +283,19 @@
                 }
             }
         }
+
+        .playerListWrap {
+            margin-top: 10rem;
+
+            .playerList {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
     }
 }
 
 @media (min-width:1200px) {
     .myTeamWrap {
-        padding: 5rem 1rem;
 
         .myTeamDisplay {
             .myTeamInfoB {
@@ -294,7 +329,7 @@
 
         .playerListWrap {
             .playerList {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(5, 1fr);
             }
         }
     }
@@ -302,7 +337,6 @@
 
 @media (min-width:1600px) {
     .myTeamWrap {
-        padding: 5rem 1rem;
 
         .myTeamDisplay {
             .myTeamInfoB {
@@ -314,7 +348,7 @@
 
         .playerListWrap {
             .playerList {
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: repeat(6, 1fr);
             }
         }
     }

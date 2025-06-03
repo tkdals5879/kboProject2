@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "KBO medium";
+  src: url(../../font/KBO\ Dia\ Gothic_medium.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
 .stadiumDetailWrap {
   width: 100%;
   padding: 5rem 0;
@@ -14,16 +20,12 @@
   align-items: end;
   margin-bottom: 1rem;
 }
-.stadiumDetailWrap .information .text h1 {
-  font-size: 1.5rem;
-}
 .stadiumDetailWrap .information .text p {
   color: #ccc;
   margin-bottom: 6px;
   font-size: 0.8rem;
 }
 .stadiumDetailWrap .information .stadiumPicture {
-  margin-top: 0.5rem;
   box-shadow: 0px 0px 10px #000;
 }
 .stadiumDetailWrap .information .stadiumPicture img {
@@ -32,28 +34,10 @@
 .stadiumDetailWrap .information .homeTeamInfo {
   margin: 5rem auto;
 }
-.stadiumDetailWrap .information .homeTeamInfo .homeTeamInfoTop {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-.stadiumDetailWrap .information .homeTeamInfo .homeTeamInfoTop h2 {
+.stadiumDetailWrap .information .homeTeamInfo h1 {
+  font-size: 1.5rem;
   padding-left: 1rem;
-  font-size: 1.3rem;
-}
-.stadiumDetailWrap .information .homeTeamInfo .homeTeamInfoTop button {
-  font-size: 1.2rem;
-  background-color: transparent;
-  border: none;
-  color: #969696;
-}
-.stadiumDetailWrap .information .homeTeamInfo .homeTeamInfoTop .favorite {
-  cursor: pointer;
-  margin-right: 1rem;
-}
-.stadiumDetailWrap .information .homeTeamInfo .homeTeamInfoTop .favorite .fav {
-  color: gold;
+  margin-bottom: 1rem;
 }
 .stadiumDetailWrap .information .homeTeamInfo > div:not(:first-child) {
   border-top: 1px solid #ccc;
@@ -65,6 +49,27 @@
 }
 .stadiumDetailWrap .information .homeTeamInfo > div:not(:first-child) .homeTeamInfoLeft {
   align-content: center;
+  position: relative;
+  max-width: 270px;
+}
+.stadiumDetailWrap .information .homeTeamInfo > div:not(:first-child) .homeTeamInfoLeft button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  align-self: flex-start;
+  font-size: 1.2rem;
+  background-color: transparent;
+  border: none;
+  color: #969696;
+}
+.stadiumDetailWrap .information .homeTeamInfo > div:not(:first-child) .homeTeamInfoLeft .favorite {
+  cursor: pointer;
+}
+.stadiumDetailWrap .information .homeTeamInfo > div:not(:first-child) .homeTeamInfoLeft .favorite .fav {
+  color: gold;
+}
+.stadiumDetailWrap .information .homeTeamInfo > div:not(:first-child) .homeTeamInfoLeft img {
+  max-height: 170px;
 }
 .stadiumDetailWrap .information .homeTeamInfo > div:not(:first-child) .homeTeamInfoRight {
   display: flex;
@@ -79,7 +84,7 @@
   color: #6E6E73;
   font-size: 0.8rem;
 }
-.stadiumDetailWrap .information .homeTeamInfo > div:not(:first-child) .homeTeamInfoRight span {
+.stadiumDetailWrap .information .homeTeamInfo > div:not(:first-child) .homeTeamInfoRight > span {
   margin-left: auto;
   border-bottom: 1px solid #000;
 }
@@ -95,6 +100,7 @@
 .stadiumDetailWrap .location iframe {
   width: 100%;
   height: 100%;
+  border-radius: 20px;
 }
 
 @media (min-width: 767px) {
@@ -115,14 +121,15 @@
   }
   .stadiumDetailWrap .information .homeTeamInfo {
     width: 100%;
-    margin: 0;
-    border: 2px solid #eee;
-    border-radius: 10px;
     padding: 1rem;
     padding-bottom: 2rem;
+    border: 2px solid #eee;
+    overflow: hidden;
+    background-color: #fff;
   }
   .stadiumDetailWrap .information .homeTeamInfo .homeTeamInfoTop {
     margin-bottom: 2rem;
+    padding: 0 3rem;
   }
   .stadiumDetailWrap .information .homeTeamInfo .homeTeamInfoTop h2 {
     font-size: 1.5rem;
@@ -139,7 +146,6 @@
     padding: 0;
   }
   .stadiumDetailWrap .information .homeTeamInfo > div:not(:first-child) .homeTeamInfoLeft {
-    width: 20vw;
     object-fit: contain;
     margin: auto;
   }
@@ -148,13 +154,17 @@
   }
   .stadiumDetailWrap .information .homeTeamInfo > div:not(:first-child) .homeTeamInfoRight h3 {
     font-size: 1.2rem;
-    margin-bottom: 1rem;
   }
   .stadiumDetailWrap .information .homeTeamInfo > div:not(:first-child) .homeTeamInfoRight p {
     font-size: 1rem;
   }
+  .stadiumDetailWrap .information .homeTeamInfo > div:not(:first-child) .homeTeamInfoRight p span {
+    display: inline;
+    border-bottom: none;
+    font-size: 0.9rem;
+    color: #888;
+  }
   .stadiumDetailWrap .location {
-    margin-top: 5rem;
     padding: 0;
   }
   .stadiumDetailWrap .location h2 {
@@ -164,9 +174,77 @@
     padding: 0;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .stadiumDetailWrap {
-    padding: 5rem 15rem;
+    padding: 0;
+    padding-top: 60vh;
+  }
+  .stadiumDetailWrap .information {
+    border: 100px 100px 0 0;
+  }
+  .stadiumDetailWrap .information .text {
+    position: fixed;
+    top: 15rem;
+    left: 18rem;
+    z-index: -1;
+  }
+  .stadiumDetailWrap .information .stadiumPicture {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    border-radius: 0;
+  }
+  .stadiumDetailWrap .information .stadiumPicture img {
+    width: 100%;
+    background-size: cover;
+    opacity: 0.7;
+  }
+  .stadiumDetailWrap .information .homeTeamInfo {
+    padding-top: 3rem;
+    margin: 5rem auto 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 100px 100px 0 0;
+    box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.1);
+  }
+  .stadiumDetailWrap .information .homeTeamInfo h1 {
+    padding-left: 3rem;
+  }
+  .stadiumDetailWrap .information .homeTeamInfo > div:last-child {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .stadiumDetailWrap .information .homeTeamInfo > div:last-child .homeTeamInfoLeft {
+    margin: 0;
+  }
+  .stadiumDetailWrap .information .homeTeamInfo > div:last-child .homeTeamInfoLeft img {
+    width: 80%;
+    min-width: 180px;
+    margin: auto;
+  }
+  .stadiumDetailWrap .information .homeTeamInfo > div:last-child .homeTeamInfoLeft .favorite {
+    top: 3rem;
+  }
+  .stadiumDetailWrap .information .homeTeamInfo > div:last-child .homeTeamInfoRight p {
+    color: #000;
+  }
+  .stadiumDetailWrap .information .homeTeamInfo > div:last-child .homeTeamInfoRight span {
+    display: none;
+  }
+  .stadiumDetailWrap .location {
+    height: 1000px;
+    padding: 4rem 4rem 10rem 4rem;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
+@media (min-width: 1400px) {
+  .stadiumDetailWrap {
+    padding-top: 95vh;
+  }
+  .stadiumDetailWrap .information .stadiumPicture img {
+    min-height: 100vh;
   }
 }
 

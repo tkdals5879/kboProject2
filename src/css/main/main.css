@@ -78,6 +78,11 @@
   margin-bottom: 1rem;
   font-size: 1.5rem;
 }
+.mainWrap > div .mainResultWrap .resultTable {
+  background-color: #333;
+  padding: 1rem;
+  border-radius: 20px;
+}
 .mainWrap > div .mainResultWrap .resultTable table {
   border: none;
   border-radius: 10px;
@@ -85,7 +90,6 @@
 }
 .mainWrap > div .mainResultWrap .resultTable table thead {
   font-size: 0.5rem;
-  background-color: #ccc;
 }
 .mainWrap > div .mainResultWrap .resultTable table thead tr th {
   padding: 0.5rem 0;
@@ -99,9 +103,6 @@
   padding: 1rem 0.2rem;
   border: none;
   text-align: center;
-}
-.mainWrap > div .mainResultWrap .resultTable table tbody tr:nth-child(2n) {
-  background-color: #eee;
 }
 .mainWrap .notice {
   position: absolute;
@@ -129,6 +130,9 @@
   .mainWrap {
     padding: 0;
     padding-top: 100vh;
+  }
+  .mainWrap > div:last-child {
+    border-radius: 100px 100px 0 0;
   }
   .mainWrap .videoBg {
     display: block;
