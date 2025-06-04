@@ -6,9 +6,10 @@ import KboClub from './pages/KboClub';
 import Stadium from './pages/Stadium';
 import StadiumDetail from './pages/StadiumDetail';
 import Schedule from './pages/Schedule'
-import Ticketing from './pages/Ticketing'
+// import Ticketing from './pages/Ticketing'
 import Myteam from './pages/Myteam'
 import Main from './pages/Main'
+import Highlight from './pages/Highlight';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -24,7 +25,7 @@ function App() {
           <Route path='/stadium' element={<Stadium/>}/>
           <Route path='/stadium/:teamId' element={<StadiumDetail/>}/>
           <Route path='/schedule' element={<Schedule/>}/>
-          <Route path='/ticketing' element={<Ticketing/>}/>
+          <Route path='/highlight' element={<Highlight/>}/>
           <Route path='/myteam' element={<Myteam/>}/>
           <Route path='/kboClub' element={<KboClub/>}/>
         </Route>

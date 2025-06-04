@@ -1,0 +1,13 @@
+.highlightWrap {
+  padding: calc(120px + 1rem) 1rem;
+}
+.highlightWrap h3 {
+  font-size: calc(1vw + 1rem);
+  margin-bottom: 5rem;
+}
+.highlightWrap .videoList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/*# sourceMappingURL=highlight.css.map */

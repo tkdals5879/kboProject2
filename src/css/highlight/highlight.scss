@@ -1,0 +1,15 @@
+.highlightWrap {
+    padding: calc(120px + 1rem) 1rem;
+
+    h3 {
+        font-size: calc(1vw + 1rem);
+        margin-bottom: 5rem;
+    }
+
+    .videoList{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        .videoBox{}
+    }
+
+}
