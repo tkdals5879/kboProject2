@@ -3,7 +3,7 @@ import '../css/highlight/highlight.css'
 
 const Highlight = () => {
   const [videos, setVideos] = useState([]);
-  const [focusedVideo,setFocusVideo] = useState(false);
+  // const [focusedVideo,setFocusVideo] = useState(false);
 
   useEffect(() => {
     const API_KEY = process.env.REACT_APP_YOUTUBE_API;
