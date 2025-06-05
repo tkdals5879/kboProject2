@@ -29,7 +29,7 @@ const Schedule = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
-    axios.get(" http://localhost:8000/api/games")
+    axios.get(" https://baseball-project-1.onrender.com/api/games")
       .then(res => {
         console.log("백엔드 응답:", res.data.games);
 

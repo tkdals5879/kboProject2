@@ -12,7 +12,7 @@ const Highlight = () => {
     const fetchVideos = async () => {
       try {
         const response = await fetch(
-          `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=20&type=video`
+          `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=10&type=video`
         );
         const data = await response?.json();
         console.log(data)
@@ -41,6 +41,8 @@ const Highlight = () => {
               title={video?.snippet?.title}
               allowFullScreen
             ></iframe>
+            <figure>
+                <img src={video?.snippet?.thumbnails?.high?.url} alt={video?.snippet?.thumbnails?.high?.url} /></figure>
             <p>{video?.snippet?.title}</p>
           </div>
         ))}

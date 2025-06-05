@@ -15,7 +15,6 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 function App() {
-  
 
   return (
     <BrowserRouter>

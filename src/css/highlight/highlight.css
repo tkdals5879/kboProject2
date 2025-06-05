@@ -7,7 +7,15 @@
 }
 .highlightWrap .videoList {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
+}
+.highlightWrap .videoList .videoBox iframe {
+  width: 80%;
+  height: 600px;
+}
+.highlightWrap .videoList .videoBox img {
+  width: 400px;
+  height: 300px;
 }
 
 /*# sourceMappingURL=highlight.css.map */

@@ -6,10 +6,20 @@
         margin-bottom: 5rem;
     }
 
-    .videoList{
+    .videoList {
         display: grid;
-        grid-template-columns: repeat(4,1fr);
-        .videoBox{}
-    }
+        grid-template-columns: 1fr;
 
+        .videoBox {
+            iframe {
+                width: 80%;
+                height: 600px;
+            }
+            img{
+                width: 400px;
+                height: 300px;
+            }
+        }
+
+    }
 }

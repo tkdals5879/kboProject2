@@ -28,7 +28,7 @@ function Modal({ clickedTeam, handleModalClose }) {
     useEffect(() => {
         if (!modalProps) return;
 
-        axios.get(` http://localhost:8000/api/recent_matches/?team=${modalProps}`)
+        axios.get(` https://baseball-project-1.onrender.com/api/recent_matches/?team=${modalProps}`)
             .then(response => {
                 setMatches(response.data.recent_matches)
             })

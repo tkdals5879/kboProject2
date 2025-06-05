@@ -33,7 +33,7 @@ function Main() {
   const [todayGames, setTodayGames] = useState([]);
 
   useEffect(() => {
-    axios.get(" http://localhost:8000/api/games")
+    axios.get(" https://baseball-project-1.onrender.com/api/games")
       .then(res => {
         console.log("백엔드 응답:", res?.data?.games);
 
@@ -57,7 +57,7 @@ function Main() {
   useEffect(() => { console.log("events", events) }, [events])
 
   useEffect(() => {
-    axios.get(' http://localhost:8000/api/ranking')
+    axios.get(' https://baseball-project-1.onrender.com/api/ranking')
       .then(response => {
         setRankings(response.data);
       })
