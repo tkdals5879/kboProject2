@@ -12,13 +12,13 @@ const Highlight = () => {
     const fetchVideos = async () => {
       try {
         const response = await fetch(
-          `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=10&type=video`
+          `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=16&type=video`
         );
         const data = await response?.json();
         console.log(data)
 
         const highlights = data?.items.filter(item =>
-          item.snippet.title.includes('하이라이트')
+          item?.snippet?.title.includes('하이라이트')
         );
 
         setVideos(highlights);

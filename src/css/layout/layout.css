@@ -7,11 +7,8 @@
   top: 0;
   left: 0;
   display: flex;
-  background-color: #fff;
-  backdrop-filter: blur(10px);
-  color: #000;
+  background-color: transparent;
   z-index: 999;
-  box-shadow: 0px 0px 10px #000;
   transition: 0.3s ease;
 }
 .layoutWrap .fixedHeader .teamLogo {
@@ -62,7 +59,7 @@
   display: block;
   width: 100%;
   height: 3px;
-  background-color: #1D1D1F;
+  background-color: #222;
   transition: 0.2s;
 }
 .layoutWrap .fixedHeader .gnb .hamNav .ham.open span:nth-child(1) {
@@ -76,7 +73,7 @@
 }
 .layoutWrap .fixedHeader .gnb .hamNav .goToHome {
   font-size: 24px;
-  color: #1D1D1F;
+  color: #222;
   background-color: transparent;
   border: none;
   margin-right: 1rem;
@@ -85,25 +82,26 @@
   width: 100%;
   height: 100vh;
   position: absolute;
-  top: 60px;
   right: 0;
   background-color: transparent;
+  z-index: -1;
 }
 .layoutWrap .fixedHeader .gnb .navWrap ul {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding: 2rem;
+  padding-top: 120px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: #fff;
 }
 .layoutWrap .fixedHeader .gnb .navWrap ul li {
   width: 100%;
-  height: 10%;
+  height: 15%;
   border-radius: 20px;
   background-color: #eee;
-  color: #1D1D1F;
+  color: #222;
   text-align: center;
   align-items: center;
 }
