@@ -5,8 +5,8 @@
   padding: 0 1rem 1rem 1rem;
 }
 .kboClubWrap section > h2 {
+  font-size: calc(1vw + 1rem);
   margin-bottom: 2rem;
-  font-size: 1.5rem;
 }
 .kboClubWrap section > h3 {
   margin-bottom: 2rem;

@@ -7,7 +7,7 @@ const Highlight = () => {
 
   useEffect(() => {
     const API_KEY = process.env.REACT_APP_YOUTUBE_API;
-    const CHANNEL_ID = 'UCoVz66yWHzVsXAFG8WhJK9g';     
+    const CHANNEL_ID = 'UCoVz66yWHzVsXAFG8WhJK9g';
 
     const fetchVideos = async () => {
       try {
@@ -41,9 +41,6 @@ const Highlight = () => {
               title={video?.snippet?.title}
               allowFullScreen
             ></iframe>
-            <figure>
-                <img src={video?.snippet?.thumbnails?.high?.url} alt={video?.snippet?.thumbnails?.high?.url} /></figure>
-            <p>{video?.snippet?.title}</p>
           </div>
         ))}
       </div>

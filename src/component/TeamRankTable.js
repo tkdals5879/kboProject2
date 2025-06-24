@@ -19,9 +19,6 @@ function TeamRankTable({favTeam}) {
 
     const columns = rankings.length > 0 ? Object.keys(rankings[0]) : [];
 
-    // const highlightTeam = rankings.find(ranking => ranking.팀명 === favTeam.modalProps)
-    // console.log("@@@@@@@@",highlightTeam)
-
     return (
         <div className='resultTable'>
             {rankings.length > 0 ? (

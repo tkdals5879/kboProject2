@@ -25,9 +25,6 @@
   margin-bottom: 6px;
   font-size: 0.8rem;
 }
-.stadiumDetailWrap .information .stadiumPicture {
-  box-shadow: 0px 0px 10px #000;
-}
 .stadiumDetailWrap .information .stadiumPicture img {
   width: 100%;
 }
@@ -35,7 +32,7 @@
   margin: 5rem auto;
 }
 .stadiumDetailWrap .information .homeTeamInfo h1 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   padding-left: 1rem;
   margin-bottom: 1rem;
 }
@@ -85,6 +82,7 @@
   font-size: 0.8rem;
 }
 .stadiumDetailWrap .information .homeTeamInfo > div:not(:first-child) .homeTeamInfoRight > span {
+  font-size: 0.7rem;
   margin-left: auto;
   border-bottom: 1px solid #000;
 }
