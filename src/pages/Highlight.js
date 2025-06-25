@@ -17,7 +17,7 @@ const Highlight = () => {
         const data = await response?.json();
         console.log(data)
 
-        const highlights = data?.items.filter(item =>
+        const highlights = data?.items?.filter(item =>
           item?.snippet?.title.includes('하이라이트')
         );
 

@@ -203,6 +203,19 @@
 
         >div {
             padding: 5rem;
+            .mainResultWrap{
+                .resultTable{
+                    table{
+                        tbody{
+                            tr{
+                                &:hover{
+                                    background-color: #eee;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             .todayGamesWrap{
                 margin-bottom: 10rem;
                 gap: 2rem;

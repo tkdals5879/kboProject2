@@ -163,6 +163,9 @@
   .mainWrap > div {
     padding: 5rem;
   }
+  .mainWrap > div .mainResultWrap .resultTable table tbody tr:hover {
+    background-color: #eee;
+  }
   .mainWrap > div .todayGamesWrap {
     margin-bottom: 10rem;
     gap: 2rem;

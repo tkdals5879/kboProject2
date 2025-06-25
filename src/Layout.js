@@ -104,7 +104,8 @@ function Layout() {
           <ul className={`topNavWrap ${favTeam ? `team_${favTeam?.name}` : ''}`}>
             <li><Link to={'/schedule'} onClick={scrollToTop}>경기일정</Link></li>
             <li><Link to={'/myteam'} onClick={scrollToTop}>나의구단</Link></li>
-            <li><Link to={'/stadium'} onClick={scrollToTop}>선수랭킹</Link></li>
+            {/* <li><Link to={'/stadium'} onClick={scrollToTop}>선수랭킹</Link></li> */}
+            {/* 선수랭킹 추가하기 */}
             <li><Link to={'/highlight'} onClick={scrollToTop}>하이라이트</Link></li>
           </ul>
 
