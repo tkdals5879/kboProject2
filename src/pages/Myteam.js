@@ -209,5 +209,3 @@ function Myteam() {
 }
 
 export default Myteam;
-
-// (<p>즐겨찾기한 구단이 없습니다!</p>)

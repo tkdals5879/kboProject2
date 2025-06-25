@@ -85,7 +85,7 @@ const Schedule = () => {
 
 
   return (
-    <div style={{ maxWidth: '1500px', margin: 'auto' }} className='scheduleWrap'>
+    <div style={{ maxWidth: '1600px', margin: 'auto' }} className='scheduleWrap'>
       <div>
         <h3>경기 일정</h3>
         <div className='dotColorInfo'>
